@@ -1,0 +1,55 @@
+/*
+----------------------------------------------------------------------------------------------------
+CSS 선택자(Selector) 
+: HTML과 달리 CSS는 대소문자를 가린다. 그러므로 내가 적용할 대상과 완벽히 일치해야 된다.
+----------------------------------------------------------------------------------------------------
+
+[자손 선택자, 하위 선택자 (Descendent Selector)]
+	h1 abrr,
+	.note  abbr {...}
+
+[자식 선택자 (Child Selector)]
+	. parent > .child {...}
+
+
+[속성 선택자 (Attribute Selector)]	
+	[id]	 						{...}
+	[class] 					{...}
+	[title]  					{...}
+	[shape] [title] 	{...}
+
+	[id="about-css"]  {...}
+	#about-css 			  {...}
+
+	[class ="note"] 	{...}		- 클래스 속성 선택자는 정확하게 note에게만 적용한다. 
+	.note							{...}
+
+	[href^="http://"]	{...} 	- ^ 기호 사용시 http 단어로 시작한다면 의미 
+	[src$=".svg"]			{...}		- $ 기호 사용시 확장자 svg 모든 것들 찾는다. 
+	[src="phone"]			{...}
+*/
+
+/* body 요소 내부의 모든 자손 선택 */
+body * {  }
+
+/* body 요소 내부의 모든 자식(Child) 선택 :
+	 body 요소의 직접적인 자식 section 요소에게만 적용.*/
+body > * {  }
+
+/* Attribute */
+[title][lang] {  }
+
+/*[id="about-css"] {outline: 3px solid #fc414b;}*/
+/*#about-css{ outline: 3px solid #fc414b }*/
+
+
+/*[class="note"] {outline: 3px solid #fc414b;}*/
+/*[class="note box"] {outline: 3px solid #fc414b;}*/
+
+.box{}
+.note{}
+
+/*[title^="Scalable"] {outline: 3px solid #fc414b;}*/
+/*[title$="Language"] {outline: 3px solid #fc414b;}*/
+
+[title*="Markup"] {outline: 3px solid #fc414b;}
