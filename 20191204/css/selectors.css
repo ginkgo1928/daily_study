@@ -17,23 +17,6 @@
 
     :lang(ko)     { ... }
 
-
-  [가상 요소 (Pseudo Element)]
-
-    ::first-letter { ... }
-    ::first-line   { ... }
-    ::before       { ... }
-    ::after        { ... }
- 피규어 부분 코드
-  figure::before {
-    content: 'Figure';
-    display: block;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    padding: 0.3em 0.8em;
-    background: #222;
-    color: #fff;
-  }
 */
 /* lank(ko) 언어에 따른 속성을 적용 */
 :lang(en){font-family: "Times New Roman";}

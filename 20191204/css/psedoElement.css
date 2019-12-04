@@ -1,0 +1,47 @@
+/*
+  [가상 요소 (Pseudo Element)]
+  :가상 클래스와 가상 요소는 다르다. 가상 요소는 Element 만들어주는 것이다. 
+  차이점 (콜론)::두번  사용한다.(CSS3부터 문법이 바뀌었다. 알아두길..)
+  브라우저의 하휘 호환 목표로  콜론(:) 을 한 번 써도 된다. 
+
+    ::first-letter { ... }
+    ::first-line   { ... }
+    ::before       { ... }
+    ::after        { ... }
+ 피규어 부분 코드
+  figure::before {
+    content: 'Figure';
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 0.3em 0.8em;
+    background: #222;
+    color: #fff;
+    }
+    */
+
+    /* first-line : 첫 번쨰 라인 아닌 첫 번쨰 글자를 의미한다.*/
+   /* p::first-letter{font-weight: bold; font-size: 20px;}*/
+
+   /* before : dfn-css 요소에 content를 사용해서 [ 추가 및  font 속성을 제거 */
+   abbr::before{
+    content: '[';
+    font-style: normal;
+   }
+
+   /* after : */
+    abbr::after{
+    content: ']';
+    font-style: normal;
+   }
+
+   figure::before{
+     content: 'Figure';
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 0.3em 0.8em;
+    background: #222;
+    color: #fff;
+   }
+
