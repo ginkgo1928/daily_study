@@ -30,7 +30,7 @@ CSS 선택자(Selector)
 */
 
 /* body 요소 내부의 모든 자손 선택 */
-body * {  }
+body * { }
 
 /* body 요소 내부의 모든 자식(Child) 선택 :
 	 body 요소의 직접적인 자식 section 요소에게만 적용.*/

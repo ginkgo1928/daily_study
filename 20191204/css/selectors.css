@@ -1,0 +1,104 @@
+/*
+  [가상 클래스 (Pseudo Class)]
+
+    :link         { ... }
+    :visited      { ... }
+
+    :hover        { ... }
+    :active       { ... }
+
+    :focus        { ... }
+    :focus:hover  { ... }
+    :focus:active { ... }
+
+    :first-child  { ... }
+    :last-child   { ... }
+    :nth-child(n) { ... }
+
+    :lang(ko)     { ... }
+
+
+  [가상 요소 (Pseudo Element)]
+
+    ::first-letter { ... }
+    ::first-line   { ... }
+    ::before       { ... }
+    ::after        { ... }
+ 피규어 부분 코드
+  figure::before {
+    content: 'Figure';
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: 0.3em 0.8em;
+    background: #222;
+    color: #fff;
+  }
+*/
+/* lank(ko) 언어에 따른 속성을 적용 */
+:lang(en){font-family: "Times New Roman";}
+
+:lang(ko){font-family: "Spoq Han Sans";}
+
+
+/* Pseudo link 연결되면 */
+a:link {
+    color:#ff487c;
+}
+/* visited 방문한 상태를 의미*/
+a:visited {
+    color: #32c29a;
+}
+
+h1, h2, p{
+    color: #777;
+}
+
+h1:hover,
+h2:hover,
+p:hover{
+    background-color: #222;
+}
+
+/* active 클릭한 상태를 의미, 마우스에 의존하는 가상 클래스*/
+p:active{
+    background-color: #ff0;
+}
+
+/* focus  키보드 접근성 */
+a:focus{
+    outline-offset: 3px; 
+    outline: 3px solid  #333;
+}
+
+/* 가상 클래스는 연이어 사용할 수 있다. */
+a:focus:active{
+    outline: none;
+    background-color: #fe8440;
+}
+
+/* first-child : 실제 클래스 명을 부여하지 않아도 가상 클래스로 link 안에 첫 번째 요소를 선택한다.*/
+/*.link-list li.first-child{outline: 3px solid #ff0;}*/
+
+/* first-child 적용 문법 */
+/*.link-list li:first-child{outline: 3px solid #ff0;}*/
+
+/* last-child : link 안에 마지막 요소를 선택한다.*/
+/*.link-list li:last-child{outline: 3px solid #4ec13f;}*/
+
+/* nth-child(n) : link  안에  번호(1)를 적어서 중간요소 선택할 수 있다. */
+/*.link-list li:nth-child(1){outline: 3px solid #ff0;}*/
+
+/*.link-list li:nth-child(2){outline: 3px solid #fe8440;}*/
+
+/*.link-list li:nth-child(4){ outline: 3px solid #333;}*/
+/*.link-list li:nth-child(2n){outline: 3px solid #ff0;}*/
+/* 2의 배수: 짝수 일 경우 odd */
+.link-list li:nth-child(odd){outline: 3px solid #ff0;}
+/* 홀 수 일 : even  */
+/*.link-list li:nth-child(2n-1){outline: 3px solid #4ec13f;}*/
+.link-list li:nth-child(even){outline: 3px solid #4ec13f;}
+
+
+
+
