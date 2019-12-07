@@ -33,7 +33,7 @@
 
 
        요소 선택자 < 클래스 선택자 < ID 선택자 < 인라인 스타일
-       0,0,0,1    0,0,1,0      0,1,0,0   1,0,0,0
+        0,0,0,1    0,0,1,0      0,1,0,0       1,0,0,0
 
       [NOTE]
         *, >, +, ~ 등 콤비네이터(Combinators),
@@ -62,3 +62,20 @@
   참고: https://goo.gl/BAhjiN
 
 */
+
+/* 0011 */
+li:nth-child(2){
+  outline: 4px solid #ff0;
+}
+/* 0012 */
+ul li:nth-child(2){
+  outline-width: 1px;
+  outline-color: #b11a25;
+}
+
+/* 0012 - 동일한 점수일 경우 나중에  나온 스타일이 우선은 가진다. */
+ul.cascading-rules li{
+  outline-width:10px;
+  outline-color:#eec129;
+  outline-style: double;
+}
