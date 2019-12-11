@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko-kR">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML컨테이너 요소들</title>
+    <style>
+        .division{
+            padding: 0.1em 1.2em;
+            background-color: #f3ead5;
+            color: #463d2a;
+            font-family: "Times";
+            line-height:1.4;
+        }
+        .grren{color:#71c456;}
+        .yellow{color:#fec417;}
+        .orange{color:#fc9500;}
+        .red{color: #e9524d;}
+        .violet{color: #a953ac;}
+        .blue{color:#13ade6;}
+    </style>
+</head>
+<body>
+    <!-- 
+        HTML 요소는 묶는 컨테이너 요소들
+        - 아무런 의미 없는(Smeantic)는 가지지 않는다.
+        - 그러하므로 이 요소들은 적절한 시멘틱 요소가 없을 때 사용해야 한다.
+        
+        <div>디비전(Divsion)요소
+        - 블록(block)컨테이너
+        [예시]
+        <article lang="en-US">
+            <h2>My use of language and my cats</h2>
+            <p>My cat’s behavior hasn’t changed much since her absence, except
+               that she plays her new physique to the neighbors regularly, in an
+               attempt to get pets.</p>
+        <div lang="en-GB">
+          <p>My other cat, colored black and white, is a sweetie. He followed  
+             us to the pool today, walking down the pavement with us. Yesterday
+             he apparently visited our neighbours. I wonder if he recognizes that
+            their flat is a mirror image of ours.</p>
+          <p>Hm, I just noticed that in the last paragraph I used British
+          English. But I’m supposed to write in American English. So I
+          shouldn’t say "pavement" or "flat" or "color"...</p>
+        </div>
+            <p>I should say "sidewalk" and "apartment" and "color"!</p>
+      </article>
+
+      <span> 스팬(Span)요소
+       - 인라인(inline)컨테이너
+       - 인라인 요소들(a, strong, em, b, i 등)을 감쌀때  사용된다.
+       -블록 요소들 (h1~6, P,blockquote, section 등)을 감쌀 수 없다.
+       [예시]
+        <h2>
+        SIX
+        <span>C</span>
+        <span>O</span>
+        <span>L</span>
+        <span>O</span>
+        <span>R</span>
+        <span>S</span>
+      </h2>
+
+      [참고]
+      div, span는 의미 없을 때 사용한다. 즉 표현을 위해 사용.
+     -->
+     <h2>
+        SIX
+        <span class="grren">C</span>
+        <span class="yellow">O</span>
+        <span class="orange">L</span>
+        <span class="red">O</span>
+        <span class="violet">R</span>
+        <span class="blue">S</span>
+     </h2>
+
+     <article lang="en-US">
+            <h2>My use of language and my cats</h2>
+            <p>My cat’s behavior hasn’t changed much since her absence, except
+               that she plays her new physique to the neighbors regularly, in an
+               attempt to get pets.</p>
+        <div lang="en-GB" class="division">
+          <p>My other cat, colored black and white, is a sweetie. He followed  
+             us to the pool today, walking down the pavement with us. Yesterday
+             he apparently visited our neighbours. I wonder if he recognizes that
+            their flat is a mirror image of ours.</p>
+          <p>Hm, I just noticed that in the last paragraph I used British
+          English. But I’m supposed to write in American English. So I
+          shouldn’t say "pavement" or "flat" or "color"...</p>
+        </div>
+            <p>I should say "sidewalk" and "apartment" and "color"!</p>
+      </article>
+
+</body>
+</html>
