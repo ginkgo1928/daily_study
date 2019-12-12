@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 폼 구조 디자인</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .demo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body class="demo">
+    <div class="container"> 
+        <h2>사용자 정보 입력하기</h2>
+
+        <form action="https://formspree.io/ginkgo1928@gmail.com" method="POST">
+            <p>
+                <label for="user_name">사용자 성함</label>
+                <input type="text" name="user_name" placeholder="이름 입력" id="user_name" required>
+            </p>
+            <p>
+                <label for="user_email">이메일</label>
+                <input type="email" name="user_email" id="user_email" placeholder="user@example.com">
+            </p>
+            <p>
+                <label for="user_password">비밀번호</label>
+                <input type="password" name="user_password" id="user_password" placeholder="비밓번호 6 자리 입력" maxlength="6"
+                       required>
+            </p>
+            <button type="submit" class="button is-next" disabled>다음</button>
+        <p>
+         <strong>'다음'</strong>을 클릭하시면
+         <a href="#" target="_blank">이용약관</a>과 
+         <a href="#" target="_blank">개인정보취급방침</a>
+         에 동의하는 것으로 간주합니다.
+         </p>
+         <div>
+          <p> 이미 잔디 계정이 있으신가요?</p>
+          <button type="button" class="button is-login">로그인</button>
+         </div>
+        </form>
+    </div>
+    <script>
+        var _form=document.querySelector('form');
+        var _name=_form.querySelector('#user_name');
+        var _email=_form.querySelector('#user_email');
+        var _password=_form.querySelector('#user_password');
+        var _nextButton=_form.querySelector('.button.is-next');
+        function checkActiveNextButton(e){
+            if(_name.value.length && _email.value.length && _password.value.length){
+                _nextButton.removeAttribute('disabled');
+            }else{
+                _nextButton.setAttribute('disabled','disabled');
+            }
+        }
+        _form.addEventListener('input',checkActiveNextButton);
+    </script>
+</body>
+</html>
