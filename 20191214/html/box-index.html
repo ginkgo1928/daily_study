@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS 박스모델(Box Model)</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/spoqa-han-sans/2.1.1/css/SpoqaHanSans-kr.min.css"
+    media="none"
+    onload="if(media!=='all'){media='all'}">
+  <link rel="stylesheet" href="../css/box-style.css">
+  <link rel="stylesheet" href="../css/box-model.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <section id="css-cascade">
+
+    <h1>
+      <abbr title="Cascading Style Sheets">CSS</abbr>
+      박스 모델(Box Model)
+    </h1>
+
+    <article class="part">
+      <h2>
+        <b title="Flow Contents (HTML5)">블록(Block)</b> vs
+        <b title="Phasing Contents (HTML5)">인라인(Inline)</b>
+      </h2>
+
+      <section>
+        <h3>블록 박스</h3>
+        <p class="block-box is-hover">
+          블록 박스는 다른 블록 박스에 포함되거나, 포함할 수 있고, <strong class="inline-box">너비(<code class="inline-box">width</code>) / 높이(<code class="inline-box">height</code>) 설정이 가능</strong>합니다. 내부에 콘텐츠를 포함하지 않을 경우 높이는 <code class="inline-box">0</code>입니다.
+        </p>
+      </section>
+
+      <section>
+        <h3>인라인 박스</h3>
+        <p class="block-box">
+          인라인 박스는 다른 인라인 박스에 포함되거나, 포함할 수 있지만, <strong class="inline-box is-hover">블록 요소는 포함할 수 없습니다.</strong> <strong  class="inline-box is-hover">너비(<code class="inline-box is-hover">width</code>) / 높이(<code class="inline-box is-hover">height</code>) 설정이 가능하지 않습니다. 내부에 포함한 콘텐츠 만큼 높이와 너비를 가지게 됩니다.</strong>
+        </p>
+      </section>
+
+      <section>
+        <h3>인라인 블록 박스</h3>
+        <p class="block-box">
+          인라인 블록 박스는 기본적으로는 인라인처럼 화면에 렌더링되지만, 블록 박스처럼 <strong class="inline-block-box is-hover">너비(<code class="inline-box">width</code>) / 높이(<code class="inline-box">height</code>) 설정이 가능</strong>합니다. (<code>&lt;img&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;button&gt;</code> 등)
+        </p>
+      </section>
+    </article>
+
+    <article class="part">
+      <h2>
+        <b lang="en">margin</b> /
+        <b lang="en">border</b> /
+        <b lang="en">padding</b>
+        <b style="vertical-align: -3px;">박스</b>
+      </h2>
+
+      <div class="clearfix">
+        <div class="margin-box">
+          <div class="border-box">
+            <div class="padding-box">
+              <div class="content-box">content-box</div>
+            </div>
+          </div>
+        </div>
+        <p>
+          인라인 박스는 좌/우 방향으로 마진,패딩 공간을 설정할 수 있으나,
+          <strong>상/하 방향으로는 공간이 설정되지 않습니다.</strong>
+        </p>
+      </div>
+
+    </article>
+    <article class="part">
+      <div class="demo">demo</div>
+    </article>
+
+    <article class="part">
+      <h2><b lang="en">Dimension</b> 설정</h2>
+      <p>블록 박스, 인라인 블록 박스는 <strong>수치 설정을 통해 박스의 크기를 변경</strong>할 수 있습니다.</p>
+      <ul>
+        <li>width</li>
+        <li>height</li>
+        <li>min-width</li>
+        <li>min-height</li>
+        <li>max-width</li>
+        <li>max-height</li>
+      </ul>
+      <textarea
+        class="dimension-ex"
+        cols="15"
+        rows="4"></textarea>
+        
+        <p class="box-sizing">box-sizing</p>
+    </article>
+
+    <article class="part">
+      <h2><b>Overflow</b> 설정</h2>
+      <p>부모 박스의 영역을 자식 박스가 <strong>넘어서게 될 때 화면에 어떻게 렌더링할지를 결정</strong>하게 됩니다.</p>
+
+      <div class="parent-box is-ov-auto">
+        <div class="child-box">
+          <code>overflow: auto</code>
+          <p>자동 값을 사용할 경우:<br>
+          흐름이 넘치면 x/y 축 모두 스크롤 바가 자동으로 생깁니다.<br>
+          흐름이 넘치지 않으면 스크롤바는 보이지 않습니다.</p>
+        </div>
+      </div>
+
+      <div class="parent-box is-ov-hidden">
+        <div class="child-box">
+          <code>overflow: hidden</code>
+          <p>hidden 값을 사용할 경우:<br>
+          흐름이 넘친 영역이 모두 감춰집니다.</p>
+        </div>
+      </div>
+
+      <div class="parent-box is-ov-visible">
+        <div class="child-box">
+          <code>overflow: visible</code>
+          <p>visible 값을 사용할 경우:<br>
+          흐름이 넘친 영역이 모두 보여집니다.</p>
+        </div>
+      </div>
+
+      <div class="parent-box is-ov-scroll">
+        <div class="child-box">
+          <code>overflow: scroll</code>
+          <p>scroll 값을 사용할 경우:<br>
+          x/y축 스크롤이 무조건 보입니다.</p>
+        </div>
+      </div>
+
+      <div class="parent-box is-ov-scroll-x">
+        <div class="child-box">
+          <code>overflow-x: hidden</code>
+          <p>overflow-x 값을 사용할 경우:<br>
+          x축 방향만 overflow 설정을 수행합니다.</p>
+        </div>
+      </div>
+
+      <div class="parent-box is-ov-scroll-y">
+        <div class="child-box">
+          <code>overflow-y: hidden</code>
+          <p>overflow-y 값을 사용할 경우:<br>
+          y축 방향만 overflow 설정을 수행합니다.</p>
+        </div>
+      </div>
+
+    </article>
+
+  </section>
+
+<script>
+  var dimen = document.querySelector('.dimension-ex');
+
+  function outputSize() {
+    dimen.value = `
+      width: ${dimen.clientWidth}
+      height: ${dimen.clientHeight}
+    `;
+  }
+
+  outputSize();
+
+  new ResizeObserver(outputSize).observe(dimen);
+</script>
+</body>
+</html>

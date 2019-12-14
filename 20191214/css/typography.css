@@ -1,0 +1,131 @@
+/*
+  ------------------------------------------------
+  CSS 타이포그래피 (Typography)
+  ------------------------------------------------
+
+  폰트(Fonts) 스타일 속성
+    - 폰트에 영향을 주는 속성으로
+      적용되는 모양, 크기, 굵기, 기울임 등.
+
+      font-family
+      font-size
+      font-weight
+      font-style
+      font-variant : 소문자를 작은 대문자로 바꿔주는
+
+      ※ 글자 색상은 color 속성으로 설정.
+        color keywords: red, gree, blue, pink, black
+        hex color code: #RRGGBB / 0 ~ 9, a ~ f 예) #1868a7
+        rgb, rgba: RED, GREEN, BLUE, ALPHA 예) rgba(127,255,0,0.3)
+        ※ 0 부터 255까지 시작하기 때문에 256 값은 오류!, ALPHA(= 투명도, 0 : 투명, 1: 불투명)
+        hsl, hsla: HUE, SATURATION, LIGHTNESS, ALPHA 예) hsla(360,60%,70%,1)
+      ※ 웹브라우저는 운영체제가 지원하는 기본 폰트(웹 안전 폰트)만
+        화면에 렌더링 한다. (참고: cssfontstack.com)
+        즉, 사용된 폰트가 사용자 컴퓨터에 없으면 렌더링 X.
+
+        웹 안전 폰트
+        Arial            [sans-serif]  고딕체
+        Verdana          [sans-serif]  고딕체
+        Courier New      [monospace]   코드체(공간이 동일)
+        Georgia          [serif]       명조체
+        Times New Roman  [serif]       명조체
+        Trebuchet MS     [serif]       명조체
+
+        하지만 웹 안전 폰트만으로 디자인 하는 디자이너는 없다!
+        Helvetica는 디자이너가 애용하는 폰트이지만...
+        Windows는 기본 지원하지 않는다. (Mac OSX는 지원)
+
+      ※ 비주얼 디자인 과정에서 적용 가능한 웹폰트를 사용해야 한다.
+        폰트 저작권에 주의! (참고: hyundaicard.com)
+
+      ※ 저작권 걱정 없는 폰트
+        fonts.google.com
+        google.co.kr/search?q=무료+웹폰트
+
+  --------------------------------------------------
+
+  텍스트(Text) 레이아웃 속성
+    - 텍스트 간격 및 레이아웃 기능에 영향을 주는 속성으로
+      행간, 자간, 어간, 정렬, 변형, 꾸밈, 그림자
+
+      line-height  : 줄의 높이,행간 조절(기본값 1.25, 줄 사이 간격 너무 좁으므로 권장 X, 최소 1.5 이상 사용.)
+      letter-spacing : 글자 사이 간격, 자간(기본값 0)
+      word-spacing : 단어 사이의 간격
+      text-align : 정렬 위치
+      text-indent : 첫 번째 줄 라인만 들여쓰기(= 첫 번째 글자만큼 공간이 첫 줄에 적용.)
+      text-transform : 대문자 또는 소문자로 바꾸는 속성
+      text-decoration : 선으로 꾸미는 속성
+      text-shadow : 글자에 그림자 효과를 주는 속성
+      white-space : 공백 처리하는 방법 속성
+      word-break : 단어를 어떻게 분리 할 것인지 결정.
+      word-wrap : 박스의 가로 영역을 넘친 단어 내에서 임의의 분리.
+
+*/
+
+/* 
+  [상속]
+  - font -size : 글자크기
+  - color : 글자색
+  - text-align
+  [font-size]
+  - 웹 브라우저 기본적 으로 16px(픽셀) 으로 정의.
+  - 값을 지정하면 상대적으로 작아잔다. 
+    (예시  font-size :12px)
+  - 싱대적으로 작아지는 이유? 
+  - 제목과 단락은 상대값 이기 때문에 픽셀 값으로 설정 되있지 않기 때문이다. 
+ */
+body {
+  font-family: IropkeBatangM;
+  font-size: 16px;
+  line-height: 1.5 ;
+  color: #483372;
+  /* text-align: center; */
+}
+/* 
+  font의 크기와 높이의 비례 * 1.5
+  - font-size(px) * 1.5em(웹브라우저 단위값, em 상대값)
+  - text-transform: uppercase : 대문자 적용, lowercase : 소문자 적용
+  - font-variant : 소문자를 작은 대문자를 대문자로 바꾸는 속성
+  - text-shadow : x y blur sprea color, 그림자
+
+*/
+h1 {
+  margin-top: 0;
+  font-family: MBK;
+  font-size: 32px;
+  font-weight: normal;
+   text-transform: uppercase; 
+  /* font-variant: all-small-caps; */
+  /* text-decoration: overline underline line-through; */
+  text-shadow:-5px -5px 3px #9bdbde,
+              5px 5px 3px #943978;
+
+}
+h1 a{
+  text-decoration: none;
+}
+/* white-space : pre (pre 요소 사용한 거 처럼 적용.), pre-line(들여쓰기, 공백 제거), nowrap(한 줄로 길게 적요)*/
+.white-space-ex{
+  white-space: pre-line ;
+}
+/* 
+단어를 분리를 어떻게 할 것 인지 결정
+(공백/띄어쓰기)수고했어. 오늘도
+(음절) 수 고 했 어 오 늘 도
+박스를 가로 영역을 넘친 단어 내에서 
+임의의 분리 여부를 결정하여 줄바꿈에 관여.
+ */
+.word-break-ex{
+  word-wrap:break-word;
+}
+/* 
+  letter-spacing : px 단위 보다 em 단위를 추천!
+   - 포토샵의 경우 계산 : -20/1000 (-20은 포토샵의 값)
+   - 기본적으로 자간 보다 어간이 어간보다 행간이 더 커야 가독하기 쉬워짐.
+ */
+p {
+  letter-spacing: -0.024em;
+  word-spacing: 0.05em;
+  text-indent: -0.5em; 
+  /* padding-left: 1em; */
+}
