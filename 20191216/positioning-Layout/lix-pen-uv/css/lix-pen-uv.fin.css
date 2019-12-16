@@ -1,0 +1,172 @@
+::selection {
+  background: #4c0f0a;
+  color: #df5a48;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #df5a48;
+  font: 18px/1.5 Lato, sans-serif;
+  letter-spacing: 0.04em;
+}
+
+#header {
+  width: 100%;
+  height: 120px;
+  background: #e0e0e0;
+}
+
+#header nav {
+  position: fixed;
+  z-index: 10;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  height: 73px;
+  background: rgba(255,255,255,0.93);
+  box-shadow: 0 5px 10px rgba(0,0,0,.25);
+}
+
+#header nav a {
+  display: block;
+  padding: 20px;
+}
+
+#header nav a img {
+  vertical-align: middle;
+}
+
+#drawDesc {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 0;
+  text-align: center;
+  color: #fff;
+}
+
+#drawDesc *:not(img) {
+  text-transform: uppercase;
+}
+
+#drawDesc h2 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+#drawDesc p {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#schema {
+  position: relative;
+  width: 624px;
+  height: 728px;
+  margin: 25px auto;
+  background: url("../images/lix2lines.png") no-repeat;
+}
+
+#schema .lix-pen {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+[class^="schema-"] {
+  position: absolute;
+  font-size: 0.7em;
+  text-align: left;
+  opacity: 0.8;
+}
+[class^="schema-"]:hover {
+  opacity: 1;
+}
+
+.schema-01 {
+  top: -8px;
+  right: 70px;
+}
+.schema-02 {
+  top: 42px;
+  right: 78px;
+}
+.schema-03 {
+  top: 110px;
+  left: 106px;
+}
+.schema-04 {
+  top: 168px;
+  right: 118px;
+  width: 65px;
+}
+.schema-05 {
+  top: 368px;
+  left: 15px;
+}
+.schema-06 {
+  width: 85px;
+  top: 414px;
+  right: 98px;
+}
+.schema-07 {
+  top: 552px;
+  left: 105px;
+}
+.schema-08 {
+  width: 180px;
+  bottom: 145px;
+  right: 4px;
+}
+.schema-08 strong {
+  display: block;
+}
+.schema-09 {
+  bottom: 58px;
+  left: 106px;
+}
+.schema-10 {
+  width: 100px;
+  bottom: -22px;
+  left: 85px;
+  text-align: right;
+}
+.schema-11 {
+  bottom: -4px;
+  right: 55px;
+}
+
+.sticky-demo {
+  padding-top: 20px;
+  background: #72221b;
+  height: 100vh;
+}
+
+.sticky-demo:last-of-type {
+  background: #ffc763;
+}
+
+.sticky-demo nav {
+  position: sticky;
+  z-index: 100;
+  top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 73px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.25);
+}
+
+.sticky-demo nav h3 {
+  margin: 0;
+  padding: 1em;
+  color: #71221b;
+  font-weight: normal;
+}
+
+.sticky-demo:last-of-type nav h3 {
+  color: #ffc763;
+}

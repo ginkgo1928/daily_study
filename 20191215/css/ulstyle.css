@@ -1,0 +1,23 @@
+body{
+    font-size: 1.6rem;
+}
+ ul{
+     padding-left: 0;
+     list-style: none;
+ }
+
+ li{
+     line-height: 1.8;
+     margin-bottom: 10px;
+ }
+ li:hover::before{
+     color:#e91e63;
+ }
+ li::before{
+     content:'☆';
+     color:#074cc5;
+     margin-left:1em;
+     /* 아이콘 모양 회전 */
+     display: inline-block;
+     transform: rotate(-45deg);
+ }
