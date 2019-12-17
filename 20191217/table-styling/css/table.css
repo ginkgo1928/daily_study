@@ -1,0 +1,104 @@
+/*
+  ------------------------------------------------
+  CSS 테이블 스타일링
+  ------------------------------------------------
+*/
+
+/* 접근성(accessibility, a11y)을 고려한 화면 감춤 */
+.a11y-hidden {
+  overflow: hidden;
+  position: absolute;
+  clip:     rect(0,0,0,0);
+  width:    1px;
+  height:   1px;
+  margin:   -1px;
+  border:   0;
+  padding:  0;
+}
+
+/* 화면에 표시되는 caption 요소의 공간 제거를 위한 설정 */
+caption.a11y-hidden {
+  position: static;
+}
+
+/**
+ * --------------------------------
+ * 테이블 디자인
+ * ----------------------------- */
+
+/* 테이블 캡션 */
+#notice-table caption{
+  text-align: left;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 14px;
+}
+
+
+/* 테이블, 셀 공통 설정 */
+#notice-table, #notice-table th, #notice-table td{
+  /* border-bottom:  1px solid #c2c2c2;  */
+  
+}
+
+/* 테이블 설정 */
+#notice-table {
+  width: 100%;
+  border-top: 1px solid #d0d0d0;
+  /* 테이블 칸 사이의 미세한 간격을 제거 */
+  border-collapse: collapse; 
+  /* border-spacing:  테아블 옆, 높이 설정; */
+  /* border-spacing:  20px 10px ; */
+}
+
+#notice-table.is-zebra tr:nth-child(even){
+  background: #e5e5e5;
+}
+
+#notice-table col:nth-child(1){width: 70px;}
+#notice-table col:nth-child(3){width: 150px;}
+
+#notice-table.is-hover{
+  background: #fff;
+}
+
+/* 제목,내용 셀 설정 */
+#notice-table th, #notice-table td{
+  border-bottom: 1px solid #d0d0d0; 
+  padding: 0.55em 0.8em;
+  font-size:  14px;
+}
+
+#notice-table.is-hover tr:hover{
+  background: #f0f0f0;
+}
+/* even 짝수 odd 홀수 */
+#notice-table.i.is-zebra tr:nth-child(even):hover{
+  background:#ababab;
+}
+
+
+#notice-table th{
+  border-bottom: none;
+  background:#f4f4f4;
+  color: #828282;
+  font-weight: normal;
+}
+#notice-table td:not(:nth-child(2)){
+  text-align: center;
+  color: #999999;
+
+}
+
+#notice-table a{
+  color: #828282;
+  text-decoration: none;
+}
+
+#notice-table a:hover,
+#notice-table a:focus{
+  text-decoration: underline;
+  /* currentColor 위 a 요소값을 그대로 사용을 의미 */
+  /* padding-bottom:1px ;
+  border-bottom:1px solid currentColor ; */
+}
