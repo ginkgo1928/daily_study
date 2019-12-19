@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.sonic-adventure {
+    position: relative;
+    background: #ffff00;
+    height: inherit;
+}
+
+/* 
+
+CSS 트랜지션(Transition): IE 10+
+
+  transition-property         트랜지션 속성
+  transition-duration         트랜지션 시간
+  transition-timing-function  트랜지션 타이밍 함수
+  transition-delay            트랜지션 지연시간
+  transition                  트랜지션 속기형
+
+*/
+
+/* 모든 하위 요소 설정 */
+.sonic-adventure .headline {
+    transition: all 0.4s cubic-bezier(1, 0.233, 0.765, 1) 0.3s;
+}
+
+.sonic-adventure .sonic{
+    transition: all 0.45s ease-in-out 0.7s;
+}
+
+.sonic-adventure .desc{
+    transition: all 0.3s cubic-bezier(0.4, 0.233, 0.765,0.789)1.05s;
+}
+
+.headline {
+    /* 초기상태 (initial state) */
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -156px;
+    /* transition-property: top,transform;
+    transition-duration: 0.45s, 0.8s; */
+    /*  linear,ease, ease-in, ease-out, ease-in-out */
+    /* easeInOutQuad */
+    /* transition-timing-function: cubic-bezier(1, 0.23, 0, 0.93); */
+    /* transition-delay: 0.4s, 0.4s; */
+    /* transition: all 0.4s ease-out 0.35s; */
+}
+
+.sonic {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -136.5px;
+    transform-origin: 50% 50%;
+}
+
+.desc {
+    position: absolute;
+    top: 155px;
+    left: 50%;
+    width:300px;
+    margin-left: -150px;
+    text-align: right;
+    color: #005baa;
+}
+
+.desc:hover{
+    color: #a4bf8e;
+}
+
+.sonic-adventure:hover .headline {
+    /* 종료상태 (final state) */
+    top: 100px;
+    transform: rotate(10deg);
+}
+
+.sonic-adventure:hover .sonic {
+    bottom: 100px;
+    transform: scale(1.1)translate(10px, 50px)rotate(360deg);
+}
+
+.sonic-adventure:hover .desc{
+    top: 480px;
+    width: 280px;
+    margin-left:-140px;
+    transform: rotate(-80deg)translate(130px,-190px);
+}
+
+.sonic-adventure .headline:hover{
+    transform: scale(1.4);
+}
+
+.sonic-adventure .sonic:hover{
+    transform: scale(0)translate(10px, 50px)rotate(360deg);
+}
