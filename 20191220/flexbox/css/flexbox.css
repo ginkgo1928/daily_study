@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1100px;
+  min-height: 100vh;
+  font: 1.4rem/1.5 "Open Sans", Verdana, Sans-Serif;
+  color: #505050;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.toggle-caniuse {
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid currentcolor;
+  border-radius: 4px;
+  padding: 7px 10px;
+  background: none;
+  font-size: 14px;
+  color: #505050;
+  transition: all 0.2s;
+}
+
+.toggle-caniuse:hover,
+.toggle-caniuse:focus {
+  border-color: currentcolor;
+  color: #009cc1;
+}
+
+.toggle-caniuse:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px currentcolor;
+}
+
+.flex-practice-ex {
+  margin: 4rem 0 2rem;
+}
+
+.flex-practice-ex figcaption {
+  display: inline-block;
+  margin-left: 5%;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  padding: 0.2em 0.4em;
+  font-size: 1.8rem;
+  color: #342c40;
+  background: rgba(250,230,0,0.35);
+}
+
+.flex-practice-ex img {
+  display: block;
+  width: 90%;
+  height: auto;
+  margin-bottom: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* -------------------------------------------------------- 
+ * Flexbox 실습
+ */
+
+.flex-container {
+  /* 부모에게 display : flex만 선언 할 경우 자동으로 자식만 flex-item 설정된다.
+    (단 그 안의 자식은 아니다) 필요하다면 flex 내부에  또 flex를 선언해도 된다.*/
+  display: flex;
+  /*  흐름을 변경(기본값 : row(가로정렬), column(세로정렬) */
+  /* flex-direction: row; */
+  border: 1px solid transparent;
+  box-shadow: 0 0 0 1px #d9d9d9;
+  flex-direction: row-reverse;
+  /* [flex 플로우 축] 
+  - flex-direction 속성 값에 따라서 축의 흐름이 바꾼다.
+  - flex-direction : row 일 경우 가로방향의 흐름.( flex start - center - flex end) 
+  - flex-direction: column 일 경우 세로방향의 흐름
+  */
+
+  /* [justify-content] 
+    - 주축에 대한 정렬.
+    - flex-start
+    - center
+    - flex-end
+    - space-between : a와 b 사이의 공간
+    - space-around : a와 b 사이의 둘러싼다
+    - row-reverse
+
+   */
+   justify-content: space-evenly;
+}
+
+.flex-item {
+  width: 50px;  
+  height: 50px;
+  margin-bottom: 1px;
+  font-size: 2rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.flex-item:nth-child(1) { background: #d9727b; }
+.flex-item:nth-child(2) { background: #735454; }
+.flex-item:nth-child(3) { background: #342c40; }
+.flex-item:nth-child(4) { background: #f2ad94; }
+.flex-item:nth-child(5) { background: #f2d0c4; }
+.flex-item:nth-child(6) { background: #009cc1; }
+.flex-item:nth-child(7) { background: #016b8e; }
