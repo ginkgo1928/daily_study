@@ -1,0 +1,152 @@
+/*
+  ------------------------------------------------
+  CSS 박스 모델 (Box Model)
+  ------------------------------------------------
+
+  CSS를 사용해 HTML 요소를 레이아웃(배치) 하려면 박스 모델에
+  대해 먼저 이해해야 한다.
+
+    [BLOCK vs INLINE]
+      * block level 요소 (Flow Contents)
+      * inline 요소 (Phrasing Contents)
+
+      [block 요소들]
+        - address
+        - article
+        - aside
+        - audio
+        - blockquote
+        - canvas
+        - dd
+        - div
+        - dl
+        - fieldset
+        - figcaption
+        - figure
+        - footer
+        - form
+        - h1~6
+        - header
+        - hr
+        - noscript
+        - ol
+        - output
+        - p
+        - pre
+        - section
+        - table
+        - tfoot
+        - ul
+        - video
+
+    [BOX]
+      * margin-box   --  외부 공간 박스 (배경색 적용 X, 음수 사용 가능)
+      * border-box   --  테두리 공간 박스 (box 테두리, 배경색 적용 O, 음수 사용 불가능)
+      * padding-box  --  내부 공간 박스 (안쪽 여백 적용, 배경색 적용 O, 음수 사용 불가능)
+      * content-box  --  콘텐츠 공간 박스 (배경색 적용 O)
+
+      [margin]
+        * margin-top
+        * margin-right
+        * margin-bottom
+        * margin-left
+        * margin: t r b l
+        * margin: t r b (l=r)
+        * margin: t r (b=t) (l=r)
+        * margin: t (r=t) (b=t) (l=r)
+
+      [border]
+        * border-(top|right|bottom|left)-width
+        * border-(top|right|bottom|left)-style
+        * border-(top|right|bottom|left)-color
+        * border: width style color
+        * border-top: width style color
+        * border-right: width style color
+        * border-bottom: width style color
+        * border-left: width style color
+
+      [padding]
+        * padding-top
+        * padding-right
+        * padding-bottom
+        * padding-left
+        * padding: t r b l
+        * padding: t r b (l=r)
+        * padding: t r (b=t) (l=r)
+        * padding: t (r=t) (b=t) (l=r)
+
+    [DIMENSION]
+      * width       --  박스 너비
+      * height      --  박스 높이
+      * min-width   --  박스 최소 너비
+      * min-height  --  박스 최소 높이
+      * max-width   --  박스 최대 너비
+      * max-height  --  박스 최대 높이
+
+    [BOX SIZING]
+      * content-box
+      * border-box
+
+      - content-box (default):
+        width = content-box
+        height = content-box
+
+      - border-box:
+        width = content-box + padding-box + border-box
+        height = content-box + padding-box + border-box
+
+    [FLOW]
+        * overflow  --  박스를 넘쳐난 상태(흐름) 조정
+        - auto
+        - visible
+        - hidden
+        - scroll
+
+*/
+/*  
+   - user agent stylesheet 에서 기본적으로 block,  inline 요소 인지 확인 할 수 있다.
+   - html은 기본적으로 block, inline으로 설정되지만 display로 덮어서 설정 할 수 있다.
+
+   - display : inline-block(보이지만 상단 부분의 공간은 전체로 덩어리로 가져가서 글자가 벽에 
+    부딪혔을 때 떨어지지 않는다,확인) 
+ */
+.inline-block-box {  
+  display: inline-block;
+  width: 700px;
+}
+
+.demo{
+  width: 100px;
+  height: 100px;
+  background: #eeeeee;
+  text-align: center;
+  /* text를 가운데 오게 설정 */
+  line-height: 100px;
+  padding-top: 1em;
+  margin: 20px 10px 10px;
+  border-bottom: 1em solid #6d70d2;
+}
+
+.dimension-ex {
+min-width: 200px;
+min-height: 80px;
+max-width: 500px;
+max-height: 120px;
+}
+
+.box-sizing{
+
+  /*[box]
+    - width는 padding, border 의 값을 포함하지 않는다.
+     - box-sizing: border-box; 의 경우 padding, border의 값을 포함하여 계산한다.
+
+   */
+  /* box-sizing: border-box; */
+  width: 200px;
+  height: 100px;
+  border: 1px solid;
+  text-align: center;
+  line-height: 100px;
+  padding: 10px;
+}
+

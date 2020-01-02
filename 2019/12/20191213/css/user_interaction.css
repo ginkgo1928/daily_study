@@ -1,0 +1,76 @@
+/* User interaction css */
+html, body {
+    height: 100%;
+  }
+  body {
+    
+    margin: 0;
+  }
+  .demo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button.is-show {
+    cursor: pointer;
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 1em 1.4em;
+    font-family: "Spoqa Han Sans";
+    font-weight: 400;
+    font-size: 15px;
+    color: #454545;
+    background: #eeeeee;
+    transition: all 0.1s ease-out;
+  }
+  .button.is-show:hover {
+    background: #11a981;
+    color: #fff;
+  }
+  .button.is-show:active {
+    transform: scale(0.98);
+    opacity: 0.8;
+  }
+  .button.is-show:focus {
+    outline: none;
+    border-color: #11a981;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100vw;
+  }
+  .container[hidden] {
+    display: none;
+  }
+  .dropzone {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    border: 10px solid #eee;
+    transition: all 0.24s ease-in-out;
+  }
+  .dropzone p::selection {
+    background: #eee;
+    color: #454545;
+  }
+  .dropzone p {
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    font-size: 56px;
+    font-weight: 900;
+    color: #eee;
+  }
+  .drag-element {
+    user-select: none;
+  }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title> CSS 캐스케이드(Cascade)</title>
+	<link rel="stylesheet"  href="../css/style.css">
+	<link rel="stylesheet"  href="../css/cascade.css">
+</head>
+<body>
+<section id="css-cascade">
+	<h1>
+		<abbr title="Cascading Style Sheets">CSS</abbr>
+		케스케이드(Cascade)
+	</h1>
+	<article class="part">
+		<h2>케스케이딩(Cascading) 이란?</h2>
+		<blockquote cite="https://www.wiumlie.no/2006/phd/">
+			<dfn title="케스케이딩">cascading</dfn>
+			<p title="여러 스타일 시트를 결합하고 이들 사이의 충돌을 해결하는 프로세스 용어로 Cascade를 정의하고 있다.">
+				 The process of combining several style sheets and resolving conflicts between them.
+			</p>
+			<cite>
+				<a href="https://www.wiumlie.no/2006/phd/" target="_blank">-<em>Håkon Wium Lie</em>, Cascading Style Sheets, PhD Thesis</a>
+			</cite>
+		</blockquote>
+	</article>
+
+	<article class="part">
+		<h2>케이케이딩 규칙(Rules)</h2>
+      <ul class="cascading-rules">
+        <li>
+          <img src="https://stuffandnonsense.co.uk/archives/images/css-specificity-wars-storm-trooper.png"  alt="storm trooper" title="storm trooper">
+          <p>
+            <strong>element selector</strong><br>
+            <em>Specificity: 0,0,1 (1)</em>
+          </p>
+        </li>
+        <li>
+          <img src="https://stuffandnonsense.co.uk/archives/images/css-specificity-wars-maul.png" alt="maul" title="maul">
+          <p>
+            <strong>
+              class selector<br>
+              attribute selector<br>
+              pseudo-class</strong><br>
+            <em>Specificity: 0,1,0 (10)</em>
+          </p>
+        </li>
+        <li>
+          <img src="https://stuffandnonsense.co.uk/archives/images/css-specificity-wars-vader.png" alt="vader" title="vader">
+          <p>
+            <strong>id selector</strong><br>
+            <em>Specificity: 1,0,0 (100)</em>
+          </p>
+        </li>
+        <li>
+          <img src="https://stuffandnonsense.co.uk/archives/images/css-specificity-wars-emperor.png" alt="emperor" title="emperor">
+          <p>
+            <strong>style attribute</strong><br>
+            <em>Specificity: 1,0,0,0 (1000)</em>
+          </p>
+        </li>
+      </ul>
+
+      <a href="https://stuffandnonsense.co.uk/archives/css_specificity_wars.html" target="_blank">
+      <figure>
+        <img src="https://stuffandnonsense.co.uk/archives/images/css-specificity-wars.png" alt="">
+          <figcaption>CSS Specificity Wars by Andy Clarke 2019.</figcaption>
+      </figure>
+      </a>
+    	</article>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+/* Tmon-font */
+@font-face { 
+    font-family: TmonMonsori;
+    src: url(TmonMonsori.woff) format('woff');
+     font-size: normal;
+     font-weight: normal;
+     unicode-range: U+0-10FFFF;
+ }
+
+ /* 메르세데스 font */
+@font-face {
+    font-family: MBK;
+    src:url(MBKCorporateS-Light.woff) format('woff');
+    font-size: normal;
+    font-weight: normal;
+    unicode-range: U+0-10FFFF;
+  }

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS보더이미지</title>
+    <link rel="stylesheet" href="css/border-image.css">
+</head>
+
+<body>
+    <!-- SUPPORT -->
+    <button type="button" class="toggle-caniuse">브라우저 지원 정보 켜기</button>
+    <p hidden class="ciu_embed" data-feature="border-image" data-periods="current,past_1,past_2,past_3"
+        data-accessible-colours="false"></p>
+
+    <!-- 보더 -->
+    <figure>
+        <figcaption>CSS 보더</figcaption>
+        <div class="border-demo">
+            <p>border 속성은 4개의 모든 테두리가 동일 할 때 유용하게 사용됩니다. 4개 테두리 모양, 색, 두께가 모두 다를 경우는 border-style, border-color,
+                border-width 속성으로 세부 디자인을 합니다.</p>
+        </div>
+    </figure>
+
+    <!-- 항공 우편 이미지 -->
+    <figure>
+        <figcaption>항공 우편 이미지</figcaption>
+        <img src="http://svgshare.com/i/6Fu.svg" alt width="255">
+    </figure>
+
+    <!-- 항공 우편 보더 이미지 -->
+    <figure>
+        <figcaption>CSS 항공 우편 보더 이미지</figcaption>
+        <div class="border-demo is-airmail">
+            <p>테두리 이미지를 사용하면 이미지를 9 개로 슬라이스하고 내장 된 테두리 스타일 대신 테두리에이 조각을 사용할 수 있습니다. 테두리 이미지를 만들 때 가장 먼저 생각해야 할 것은 테두리의
+                다른 위치에서 9 개의 다른 조각으로 잘라서 조각으로 사용한다는 것입니다.</p>
+            <p>border-image를 사용할 때는 먼저 표준 테두리를 넣는 것이 가장 좋으며, 이미지가 다운로드되지 않는 경우에는 대체로 사용하는 것이 좋습니다. 그런 다음 속성을 추가하여
+                border-image자체 를 정의합니다.</p>
+        </div>
+    </figure>
+
+    <!-- 나무 액자 이미지 -->
+    <figure>
+        <figcaption>나무 액자 이미지</figcaption>
+        <img src="http://image.ibb.co/hCxNbn/wood.png" alt style="width: 255px">
+    </figure>
+
+    <!-- 나무 프레임 보더 이미지(가로형) -->
+    <figure>
+        <figcaption>CSS 나무 프레임 보더 이미지 (가로형)</figcaption>
+        <div>/
+            <div class="is-wood">
+                <img class="is-rwd"
+                    src="http://images.unsplash.com/photo-1512620053409-d1cb57676f2e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=65dceae4e34e9514577cc8dc129db438&auto=format&fit=crop&w=900&q=70"
+                    alt>
+            </div>
+        </div>
+    </figure>
+
+    <!-- 나무 프레임 보더 이미지(세로형) -->
+    <figure>
+        <figcaption>CSS 나무 프레임 보더 이미지 (세로형)</figcaption>
+        <div class="is-wood">
+            <img class="is-rwd"
+                src="http://images.unsplash.com/photo-1519074069444-1ba4fff66d16?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=815082c477a9063db2148495201e1137&auto=format&fit=crop&w=900&q=70"
+                alt>
+        </div>
+    </figure>
+
+    <!-- 문양이 복잡한 이미지 -->
+    <figure>
+        <figcaption>문양이 복잡한 이미지</figcaption>
+        <img src="http://image.ibb.co/nvJENS/pattern.png" alt style="width: 255px">
+    </figure>
+
+    <!-- CSS 문양이 복잡한 보더 이미지 -->
+    <figure>
+        <figcaption>CSS 문양이 복잡한 보더 이미지</figcaption>
+        <div class="is-oriental">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsa ipsum repudiandae eum esse,
+                excepturi nemo ea fugiat, similique saepe tempora accusantium eos nostrum maxime. Delectus aspernatur
+                mollitia debitis ut.</p>
+        </div>
+    </figure>
+
+    <!-- CSS 그레디언트 보더 이미지 -->
+    <figure>
+        <figcaption>CSS 그레디언트 보더 이미지</figcaption>
+        <div class="is-gradient">
+            <img class="is-rwd"
+                src="http://images.unsplash.com/photo-1496179767723-3e2c77660f6b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3e42be8488ede010188bda48215d1995&auto=format&fit=crop&w=900&q=70"
+                alt>
+        </div>
+    </figure>
+
+    <!-- CSS 라운드 보더 이미지 -->
+    <figure>
+        <figcaption>CSS 라운드 보더 이미지</figcaption>
+        <div>
+            <img src="https://image.ibb.co/mhn297/zigzag_split.png" style="width: 140px; margin-bottom: 10px;" alt>
+            <div class="border-demo is-zigzag">
+                <p>border-image: url("zigzag.png") 10 round;</p>
+            </div>
+        </div>
+    </figure>
+
+    <!-- CSS 스트레치 보더 이미지 -->
+    <figure>
+        <figcaption>CSS 스트레치 보더 이미지</figcaption>
+        <div class="border-demo is-zigzag-stretch">
+            <p>border-image: url("zigzag.png") 10;</p>
+        </div>
+    </figure>
+
+    <!-- border-repeat -->
+    <figure>
+        <figcaption>보더 반복 설정에 따른 이미지</figcaption>
+        <div>
+            <img src="http://svgshare.com/i/6Dy.svg" style="width: 35px; margin-bottom: 10px;" alt>
+            <div class="border-demo compare is-stretch">
+                <p>stretch</p>
+            </div>
+            <div class="border-demo compare is-repeat">
+                <p>repeat</p>
+            </div>
+            <div class="border-demo compare is-round">
+                <p>round</p>
+            </div>
+            <div class="border-demo compare is-space">
+                <p>space</p>
+            </div>
+        </div>
+    </figure>
+    <!-- JavaScript -->
+    <script>
+    if (!NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+    }
+
+    var slice = [].slice;
+
+    var ciu = document.querySelector('.ciu_embed');
+    var btn = document.querySelector('.toggle-caniuse');
+    var figcaptions = document.querySelectorAll('figcaption');
+
+    btn.addEventListener('click', function(){
+    if ( ciu.hasAttribute('hidden') ) {
+    ciu.removeAttribute('hidden');
+    btn.textContent = btn.textContent.replace('켜기', '끄기');
+    } else {
+    ciu.setAttribute('hidden', true);
+    btn.textContent = btn.textContent.replace('끄기', '켜기');
+    }
+    });
+
+    figcaptions.forEach(function(f, i){
+    let next = f.nextElementSibling;
+    (i > 0) && (next.hidden = true);
+    f.addEventListener('click', function(){
+    next.hidden = !next.hidden;
+    });
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 임베디드 요소들</title>
+</head>
+
+<body>
+    <!-- 반응형 이미지 -->
+    <picture>
+        <source srcset="../media/image/kakao-3.jpg" type="image/jpg" media="(min-width:900px)">
+        <source srcset="../media/image/kakao-2.jpg" type="image/jpg" media="(min-width:600px)">
+        <img src="../media/image/kakao-1.jpg" alt="라이언 선물 뜯다">
+    </picture>
+
+    <!-- 이미지 맵 
+        circle - 동그란 모양 
+        rect - 네모난 모양
+        poly - 선 따라 그려진다.
+    -->
+    <img usemap="#kakao-icons" src="../media/image/kakao-ico.jpg" alt="라이언 이모티콘">
+    <map name="kakao-icons">
+        <area target="_blank" alt="우왕좌왕라이언" title="우왕좌왕라이언" href="https://www.google.co.kr/search?q=라이언+이모티콘"
+            coords="257,209,62" shape="circle">
+        <area target="_blank" alt="잠자는 라이언" title="잠자는 라이언" href="https://www.google.co.kr/search?q=라이언+이모티콘"
+            coords="522,160,654,266" shape="rect">
+        <area target="_blank" alt="휴식하는 라이언" title="휴식하는 라이언" href="https://www.google.co.kr/search?q=라이언+이모티콘"
+            coords="564,9,533,93,594,126,643,93,632,25,606,5" shape="poly">
+    </map>
+</body>
+</html>

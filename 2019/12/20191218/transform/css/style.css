@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    height: 100vh;
+  }
+  
+  .sonic-adventure {
+    position: relative;
+    background: #ffff00;
+    height: inherit;
+  }
+  
+  /* 
+  2D 트랜스폼(Transform)
+  
+    // 회전
+      rotateX(angle)
+      rotateY(angle)
+      rotate(angle) 
+    // 크기
+      scaleX()
+      scaleY()
+      scale(x, y)
+    // 이동
+      translateX()
+      translateY()
+      translate(x, y)
+    // 비틈
+      skewX()
+      skewY()
+      skew(x, y)
+  
+  */
+  /*  각도 : degree / 라디안: radian / turn : 회전*/
+  .headline {
+    position: absolute;
+    top:100px;
+    left: 50%;
+    margin-left: -156px;
+    transform: rotate(10deg);
+  }
+  
+  /* scale : 확대, translate : 이동, transform-origin : 중심을 축을 다른 값으로... */
+  .sonic {
+    position: absolute;
+    /* bottom: 120px; */
+    bottom: 100px;
+    left: 50%;
+    margin-left: -136.5px;
+    transform-origin: 50% 50%;
+    /* transform: rotate(70deg); */
+     transform: scale(1.1)translate(10px,50px)rotate(10deg); 
+  }
+  
+  .desc {
+    position: absolute;
+    top: 480px;
+    transform: rotate(-80deg)translate(245px,440px);
+    text-align: right;
+    width: 280px;
+    color: #005baa;
+  }

@@ -1,0 +1,16 @@
+/* External Style  : CSS 파일 HTML 에 연결 
+  CSS 문법
+    선택자(selector) {
+      속성(property): 값(value);
+    }
+*/
+section{
+		color:#90300;
+		}
+		h1{
+			color: tan;
+		}
+		abbr{
+			cursor: help;
+			text-decoration: none;
+		}

@@ -1,0 +1,115 @@
+/*
+  -----------------------------------------------------------------------------------------------------
+  CSS 포지셔닝 레이아웃(Layout)
+  - 세부적인 위치를 잡을 때사용
+  - float는 왼쪽 오른쪽만 배치 할 수 있다면, 포지셔닝은 내가 임의로 위치를 세부적이게 자유롭게 지정할 수 있다.
+  -------------------------------------------------------------------------------------------------------
+  [속성]
+ - relative : 상대 위치 설정, 내가 가지고 있는 일반 흐름의 위치에서 상대적 으로 이동 하며 기본흐름 흐름은 유지한다.
+ - ※ absolute(자주 쓰는 기술 외워.) : 절대 위치 설정, green의 경우 yellow 보다 늦게 나와서 덮어서 씌워진거 처럼 보인다.
+ (float 처럼 자신공간을 뒤에는 나오는 요소를 인식하지 못하게 하면서 그 위치를 다른요소가 차지한다.)
+
+-fixed : 화면 viewport로 고정, 부모요소를 찾지 않음.
+-sticky : 달라붙는 위치 설정, 자신의 위치에 왔을 떄 위치를 고정되게 해준다.
+(blue는 yellow가 자신의 위치에 도달할때 까지 멈춰있는다.)
+
+ [사용예시]
+ top, right 값을 설정하면 원래의 자기 위치를 벗어나서  사용자 보는 Viewport에 나타난다.
+ .is-yellow{
+  position: absolute;
+  z-index: 100;
+  top:20px;
+  right20px;
+}
+
+
+[축의 속성]
+z-index 
+: 위치가 겹쳤을 경우, 먼저 위에 있는 박스를 나중에 나온 박스 보다 
+위로 올릴 경우 x,y의 교차점 z축을 사용해서 박스를 위치를 위로 올린다(값이 높을 수록 더 상위에 존재),
+만약z-index: 값이 동일하다면 마크업 순서대로 위치, 관리를 쉽게 하기 위해서 10 단위 또는 100 단위를 추천.
+*/
+
+.box-group {
+  overflow: auto;
+  height: 420px;
+  margin-top: 20px;
+  border: 10px solid #e9e9e9;
+  background: #fff;
+}
+
+.box-wrapper {
+  height: 1600px;
+}
+
+.box {
+  width: 140px;
+  height: 140px;
+}
+
+.box.is-blue   { background: #3b4055; }
+.box.is-yellow { background: #fff06b; }
+.box.is-green  { background: #69ccb5; }
+
+
+/* 상대(relative) 위치 설정*/
+/* .is-blue{
+  position: relative;
+  top: 30px;
+  right: -100px;
+  z-index: 1;
+}
+.is-yellow{
+  position: relative;
+  top: -30px;
+  left: 40px;
+  z-index: 1;
+}
+.is-green{
+  position: relative;
+  bottom: 300px;
+  left: 20px;
+  z-index: 2;
+} */
+
+/*  절대(absolute) 위치 설정 */
+/* .is-yellow{
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0px;
+}
+.is-green{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.is-blue{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+} */
+
+/*  position:static이 아닌!! position이 다른 값으로 설정 된 것을  부모로 설정 할 수 있다.
+    position: relative --> 일반흐름을 깨지 않고 yellow의 부모를 설정 하기 위해 사용.*/
+
+/* .box-group{
+  position: relative;
+} */
+
+/* 고정(fixed) 위치 설정 */
+/* 위 yellow 에서 top 값이 설정되어 bottom 적용이 안됨,initial 로 초기화 해야 적용 가능. */
+/* .is-yellow{
+  position:fixed;
+  bottom: 0;
+  top:initial;
+  left: 0;
+} */
+
+/* 달라붙는(sticky) 위치 설정 */
+.box-group .box{
+  outline: 3px solid red;
+  position: sticky;
+  top: 0;
+  margin-bottom: 100px;
+}

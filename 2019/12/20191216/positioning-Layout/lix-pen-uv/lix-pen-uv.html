@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Layout - Positioning</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,700"
+        rel="stylesheet" media="none" onload="if(media!=='all'){media='all'}">
+  <link id="check-link" rel="stylesheet" href="css/lix-pen-uv.begin.css">
+</head>
+
+<body>
+
+  <div id="header">
+    <nav>
+      <a href="https://int.lixpen.com/pages/lix-pen-uv" target="_blank">
+        <img src="images/lix-logo.png" alt="Lix" width="82.5" height="35">
+      </a>
+    </nav>
+  </div>
+
+  <section id="drawDesc">
+
+    <h2>advanced <strong>technology</strong> meets beautiful <strong>design</strong></h2>
+
+    <p>
+      from the sustainably aluminium body to the <strong>elegant technological core</strong>,
+      every detail in lix combines <strong>beautiful engineering</strong> and <strong>meticulous craft</strong>.
+    </p>
+
+    <figure id="schema">
+      <img class="lix-pen" src="images/lix-pen-uv.svg" alt="LIX PEN UV" width="65" height="699">
+      <span class="schema-01"><strong>filament</strong> input</span>
+      <span class="schema-02"><strong>power</strong> socket</span>
+      <span class="schema-03">ø 0.59 inch</span>
+      <span class="schema-04"><strong>led</strong> heat indicator</span>
+      <span class="schema-05">6.29 inch</span>
+      <span class="schema-06"><strong>anodized</strong> unibody aluminium</span>
+      <span class="schema-07">ø 0.47 inch</span>
+      <span class="schema-08"><strong>speed</strong> control buttons</span>
+      <span class="schema-09">ø 0.31 inch</span>
+      <span class="schema-10"><strong>heating</strong> point ~ 392 °f</span>
+      <span class="schema-11"><strong>filament</strong> output</span>
+    </figure>
+
+  </section>
+
+  <div class="sticky-demo">
+    <nav>
+      <h3>Sticky Position I</h3>
+    </nav>
+  </div>
+
+  <div class="sticky-demo">
+    <nav>
+      <h3>Sticky Position II</h3>
+    </nav>
+  </div>
+
+<script>
+  var check_link = document.querySelector('#check-link');
+  var header_nav = document.querySelector('#header nav');
+  if (check_link.getAttribute('href').includes('fin')) {
+    window.addEventListener('scroll', function(e) {
+      var pos = this.scrollY || this.scrollTop;
+      if (pos > 1125) {
+        header_nav.style.position = 'static';
+      } else {
+        header_nav.style.position = 'fixed';
+      }
+    });
+  }
+</script>
+</body>
+</html>

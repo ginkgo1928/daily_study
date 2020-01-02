@@ -1,0 +1,6 @@
+/* 세로 쓰기 */
+h1{
+    background-color: black;
+    writing-mode: vertical-rl;
+    color: white;
+}
