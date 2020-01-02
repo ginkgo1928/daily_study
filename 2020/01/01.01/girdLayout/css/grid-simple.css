@@ -1,0 +1,113 @@
+:root {
+    font-size: 10px;
+  }
+  
+  body {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  
+  body *,
+  body *::before,
+  body *::after {
+    box-sizing: border-box;
+  }
+  
+  figure {
+    margin: 0;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  .demo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /*[ CSS 그리드 레이아웃] */
+  .grid {
+    width: 74rem;
+
+    /* 그리드 표시 (display) 설정 */
+    display:grid;
+
+    /* 행 템플릿 (rows template) 설정 */
+    grid-template-rows: 10rem 10rem;
+
+    /* 열 템플릿 (columns template) 설정 */
+    grid-template-columns: 10rem 10rem 10rem;
+
+    /* 행 그리드 거터 (row gutter, gap) 설정 */
+    grid-row-gap: 1rem;
+
+    /* 열 그리드 거터 (column gutter, gap) 설정 */
+    grid-column-gap: 2rem;
+
+    /* 그리드 거터(gutter, gap) 설정 */
+    grid-gap: 1rem;
+
+    /* fr(fraction, 비율) 단위 사용 */
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /* 반복 함수- repeat() 함수 사용 */
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr 2fr);
+    /* minmax() 함수 사용 */
+    
+    /* 암시적 행,열 그리드 트랙 사이즈 설정 */
+ 
+    
+  }
+  
+  
+  /* 그리드 아이템 */
+  .item {
+    border: 0.4rem solid currentcolor;
+    border-radius: 0.4rem;
+    padding: 1rem 2rem;
+    font-size: 3rem;
+    color: #3573f9;
+    transition: all 0.3s ease;
+  }
+  .item:hover {
+    background: #fcc62e;
+  }
+  
+  .align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 버튼 */
+  .button.is-toggle-photo {
+    user-select: none;
+    cursor: pointer;
+    position: fixed; 
+    right: 2rem;
+    top: 2rem;
+    border: 0;
+    border-radius: 4px;
+    padding: 1.2rem 1rem 1rem;
+    background: #3573f9;
+    color: #fff;
+    line-height: 1;
+  }
+  
+  .button.is-toggle-photo:hover {
+    background: #1553d9;
+  }
+  
+  .button.is-toggle-photo:focus {
+    outline: none;
+  }
+  
+  .button.is-toggle-photo:active {
+    transform: scale(0.98);
+  }

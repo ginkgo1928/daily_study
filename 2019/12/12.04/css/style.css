@@ -1,0 +1,37 @@
+body {
+  margin: 50px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+abbr {
+  cursor: help;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  color: #474cc5;
+}
+
+a {
+  color: #474cc5;
+}
+
+figure {
+  margin: 20px 10px;
+  border: 1px solid #999;
+  padding: 20px;
+}
+
+figcaption {
+  margin-top: 20px;
+  border-top: 1px solid #a1a1a7;
+  padding-top: 20px;
+  text-align: center;
+  color: #545496;
+}
+
+section {
+  margin-bottom: 30px;
+}

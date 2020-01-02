@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flexbox</title>
+    <link rel="stylesheet" href="css/flexbox-container.css">
+</head>
+
+<body>
+    <h1>Flex 컨테이너(부모)요소 속성</h1>
+    <h2>flex-direction (flex 컨테이너 요소 속성)</h2>
+    <h3>① row</h3>
+    <p> 흐름을 변경해주는 속성,오른쪽에서 왼쪽 향하는 수평 방향이 기본이다.</p>
+    <div class="container row">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+    </div>
+
+    <h3>② row-reverse</h3>
+    <p>왼쪽에서 오른쪽으로 향하는 수평방향.</p>
+    <div class="container reverse">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+    </div>
+
+    <h3>③ column</h3>
+    <p>위에서 아래로 향하는 수직 방향.</p>
+    <div class="container column">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+    </div>
+
+    <h3>③ column-reverse</h3>
+    <p>아래에서 위로 향하는 수직방향.</p>
+    <div class="container column-reverse">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+    </div>
+    <hr>
+    <h2> flex-wrap (flex 컨테이너 요소 속성)</h2>
+    <!-- flexbox  -->
+    <h3>① nowrap </h3>
+    <p>기본값 nowrap,부모 영역을 넘쳐난 자식들이 밑으로 떨어지지 않는다.</p>
+    <div class="flex-container nowrap">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+    </div>
+
+    <h3>② wrap </h3>
+    <p>부모 영역의 "width" 값에 맞춰서 밑으로 정렬한다.</p>
+    <div class="flex-container wrap">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+    </div>
+
+    <h3>③ wrap-reverse </h3>
+    <p>순서의 흐름은 바뀌지 않고, 위 아래의 라인만 그대로 변경된다.</p>
+    <div class="flex-container reverse">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+    </div>
+</body>
+
+</html>

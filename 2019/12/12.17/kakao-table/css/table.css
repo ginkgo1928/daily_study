@@ -1,0 +1,46 @@
+/* table */
+#kakao-table{
+    width: 100%;
+    border-collapse: collapse;
+   
+}
+/* table  capiton*/
+#kakao-table caption{
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+/*  padding 의 안쪽 여백의 공간박스로, margin이 더 적합하다. */
+#kakao-table th{
+    height: 50px;
+    background:#dadada;
+    font-size: 16px; 
+    color: #909090 ;   
+}
+
+/*  칸 간격 높이 조정 */
+#kakao-table td{
+    padding: 0.55em 0.8em;
+    border-bottom: 1px solid #dedede;
+}
+
+/* 글번호, 등록일 위치 정렬 */
+#kakao-table td:nth-child(odd){ 
+    text-align: center;
+    color: #909090;
+}
+/* a 태그 색상 변경 및 밑줄 제거 */
+#kakao-table a{
+    color: #000;
+    text-decoration: none;
+}
+
+#kakao-table a:hover,
+#kakao-table a:focus{
+  text-decoration: underline;
+}
+

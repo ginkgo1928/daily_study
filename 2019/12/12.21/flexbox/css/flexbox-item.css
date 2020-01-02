@@ -1,0 +1,52 @@
+body{
+    background: #000;
+    font-size:20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color : #fff;
+   }
+   .flex-container{
+    display:flex;
+    width:250px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 0 1px #d9d9d9;
+  }
+   .flex-container.grow{
+    display:flex;
+    width:600px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 0 1px #d9d9d9;
+   }
+ /*[flex-grow]: 기본값 0이며, 성장한다는 의미로 값을 1로 지정하면 부모 영역의 width 값에 맞춰서 자동으로 늘어난다.  */
+  .item{
+    flex: 1 0 70px;
+    height:50px;
+    margin-bottom:1px;
+    line-height:1;
+    font-size:2em;
+    text-align:center;
+    color:#fff;
+  }
+  .basis{
+    flex: 0 0 100px;
+    height:50px;
+    margin-bottom:1px;
+    line-height:1;
+     font-size:2em;
+    text-align:center;
+    color:#fff;
+  }
+  
+
+  .item:nth-child(1) { background: #d9727b; }
+  .item:nth-child(2) { background: #735454; }
+  .item:nth-child(3) { background: #342c40; }
+  .item:nth-child(4) { background: #f2ad94; }
+  .item:nth-child(5) { background: #f2d0c4; }
+  
+  
+  .basis:nth-child(1) { background: #d9727b; }
+  .basis:nth-child(2) { background: #735454; }
+  .basis:nth-child(3) { background: #342c40; }
+  .basis:nth-child(4) { background: #f2ad94; }
+  .basis:nth-child(5) { background: #fcd0c4; }
+  

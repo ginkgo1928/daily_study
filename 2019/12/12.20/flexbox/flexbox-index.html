@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 모던 레이아웃-Flexbox 인터랙티브 플레이 그라운드</title>
+    <link rel="stylesheet" href="css/flexbox-inter.css">
+</head>
+
+<body>
+    <!-- flex 컨테이너 부모 요소 속성 -->
+    <div class="container principal">
+
+        <h2>Flex 컨테이너(부모) 요소 속성</h2>
+
+        <div class="control">
+            <h4>
+                <a target="_blank" href="http://w3.unpocodetodo.info/css3/flex-abreviado.php">display</a>
+                <small>( flex 컨테이너 요소 속성 )</small>
+            </h4>
+            <div class="radio">
+                <input name="display-flex" type="radio" class="display-flex" id="Z11" value="flex" checked><label
+                    for="Z11">flex</label>
+                <input name="display-flex" type="radio" class="display-flex" id="Z12" value="inline-flex"><label
+                    for="Z12">inline-flex</label>
+            </div>
+        </div>
+        <div class="flex-container" id="displayFlex">
+            <div class="item">
+                <p>1</p>
+            </div>
+            <div class="item">
+                <p>2</p>
+            </div>
+            <div class="item">
+                <p>3</p>
+            </div>
+            <div class="item">
+                <p>4</p>
+            </div>
+            <div class="item">
+                <p>5</p>
+            </div>
+        </div>
+
+        <div class="control">
+            <h4>
+                <a target="_blank" href="http://w3.unpocodetodo.info/css3/flex-direction.php">flex-direction</a>
+                <small>( flex 컨테이너 요소 속성 )</small>
+            </h4>
+            <div class="radio">
+                <input name="flex-direction" type="radio" class="flex-direction" id="R11" value="row" checked><label
+                    for="R11">row</label>
+                <input name="flex-direction" type="radio" class="flex-direction" id="R12" value="row-reverse"><label
+                    for="R12">row-reverse</label>
+                <input name="flex-direction" type="radio" class="flex-direction" id="R13" value="column"><label
+                    for="R13">column</label>
+                <input name="flex-direction" type="radio" class="flex-direction" id="R14" value="column-reverse"><label
+                    for="R14">column-reverse</label>
+            </div>
+        </div>
+        <div class="flex-container" id="direction">
+            <div class="item">
+                <p>1</p>
+            </div>
+            <div class="item">
+                <p>2</p>
+            </div>
+            <div class="item">
+                <p>3</p>
+            </div>
+            <div class="item">
+                <p>4</p>
+            </div>
+            <div class="item">
+                <p>5</p>
+            </div>
+        </div>
+
+        <div class="control">
+            <h4>
+                <a target="_blank" href="http://w3.unpocodetodo.info/css3/flex-wrap.php">flex-wrap</a>
+                <small>( flex 컨테이너 요소 속성 )</small>
+            </h4>
+            <div class="radio">
+                <input name="flex-wrap" type="radio" class="flex-wrap" id="R21" value="nowrap" checked><label
+                    for="R21">nowrap</label>
+                <input name="flex-wrap" type="radio" class="flex-wrap" id="R22" value="wrap"><label
+                    for="R22">wrap</label>
+                <input name="flex-wrap" type="radio" class="flex-wrap" id="R23" value="wrap-reverse"><label
+                    for="R23">wrap-reverse</label>
+            </div>
+        </div>
+        <div class="flex-container" id="wrap">
+            <div class="item">
+                <p>1</p>
+            </div>
+            <div class="item">
+                <p>2</p>
+            </div>
+            <div class="item">
+                <p>3</p>
+            </div>
+            <div class="item">
+                <p>4</p>
+            </div>
+            <div class="item">
+                <p>5</p>
+            </div>
+        </div>
+
+        <div class="control">
+            <h4>
+                <a target="_blank" href="http://w3.unpocodetodo.info/css3/flex-align-items.php">align-items</a>
+                <small>( flex 컨테이너 요소 속성 )</small>
+            </h4>
+            <!-- flex-start | flex-end | center | baseline | stretch; -->
+            <div class="radio">
+                <input name="flex-align-items" type="radio" class="flex-align-items" id="R31"
+                    value="align-items-start"><label for="R31">flex-start</label>
+                <input name="flex-align-items" type="radio" class="flex-align-items" id="R32"
+                    value="align-items-end"><label for="R32">flex-end</label>
+                <input name="flex-align-items" type="radio" class="flex-align-items" id="R33"
+                    value="align-items-center"><label for="R33">center</label>
+                <input name="flex-align-items" type="radio" class="flex-align-items" id="R34"
+                    value="align-items-baseline"><label for="R34">baseline</label>
+                <input name="flex-align-items" type="radio" class="flex-align-items" id="R35"
+                    value="align-items-stretch" checked><label for="R35">stretch</label>
+            </div>
+        </div>
+        <div class="flex-container" id="align">
+            <div class="item">
+                <p>1</p>
+            </div>
+            <div class="item">
+                <p>2</p>
+            </div>
+            <div class="item">
+                <p style="font-size:50px;">3</p>
+            </div>
+            <div class="item">
+                <p>4</p>
+            </div>
+            <div class="item">
+                <p>5</p>
+            </div>
+        </div>
+
+        <div class="control">
+            <h4>
+                <a target="_blank" href="http://w3.unpocodetodo.info/css3/flex-justify-content.php">justify-content</a>
+                <small>( flex 컨테이너 요소 속성 )</small>
+            </h4>
+            <div class="radio">
+                <input name="justify-content" type="radio" class="justify-content" id="R41" value="justify-start"
+                    checked><label for="R41">flex-start</label>
+                <input name="justify-content" type="radio" class="justify-content" id="R44"
+                    value="justify-center"><label for="R44">center</label>
+                <input name="justify-content" type="radio" class="justify-content" id="R42" value="justify-end"><label
+                    for="R42">flex-end</label>
+                <input name="justify-content" type="radio" class="justify-content" id="R43"
+                    value="justify-space-between"><label for="R43">space-between</label>
+                <input name="justify-content" type="radio" class="justify-content" id="R46"
+                    value="justify-space-around"><label for="R46">space-around</label>
+                <input name="justify-content" type="radio" class="justify-content" id="R45"
+                    value="justify-space-evenly"><label for="R45">space-evenly</label>
+            </div>
+        </div>
+        <div class="flex-container" id="justify">
+            <div class="item">
+                <p>1</p>
+            </div>
+            <div class="item">
+                <p>2</p>
+            </div>
+            <div class="item">
+                <p>3</p>
+            </div>
+            <div class="item">
+                <p>4</p>
+            </div>
+            <div class="item">
+                <p>5</p>
+            </div>
+
+        </div>
+
+        <div class="control">
+            <h4>
+                <a target="_blank" href="http://w3.unpocodetodo.info/css3/flex-align-content.php">align-content</a>
+                <small>( flex 컨테이너 요소 속성 )</small>
+            </h4>
+            <div class="radio">
+                <input name="align-content" type="radio" class="align-content" id="R51"
+                    value="align-content-start"><label for="R51">flex-start</label>
+                <input name="align-content" type="radio" class="align-content" id="R52" value="align-content-end"><label
+                    for="R52">flex-end</label>
+                <input name="align-content" type="radio" class="align-content" id="R53"
+                    value="align-content-center"><label for="R53">center</label>
+                <input name="align-content" type="radio" class="align-content" id="R54"
+                    value="align-content-space-between"><label for="R54">space-between</label>
+                <input name="align-content" type="radio" class="align-content" id="R55"
+                    value="align-content-space-around"><label for="R55">space-around</label>
+                <input name="align-content" type="radio" class="align-content" id="R56"
+                    value="align-content-space-evenly"><label for="R56">space-evenly</label>
+                <input name="align-content" type="radio" class="align-content" id="R57" value="align-content-stretch"
+                    checked><label for="R57">stretch</label>
+            </div>
+        </div>
+        <div class="flex-container" id="alignContent">
+            <div class="item">
+                <p>1</p>
+            </div>
+            <div class="item">
+                <p>2</p>
+            </div>
+            <div class="item">
+                <p>3</p>
+            </div>
+            <div class="item">
+                <p>4</p>
+            </div>
+            <div class="item">
+                <p>5</p>
+            </div>
+            <div class="item">
+                <p>6</p>
+            </div>
+            <div class="item">
+                <p>7</p>
+            </div>
+            <div class="item">
+                <p>8</p>
+            </div>
+            <div class="item">
+                <p>9</p>
+            </div>
+            <div class="item">
+                <p>10</p>
+            </div>
+            <div class="item">
+                <p>11</p>
+            </div>
+            <div class="item">
+                <p>12</p>
+            </div>
+            <div class="item">
+                <p>13</p>
+            </div>
+            <div class="item">
+                <p>14</p>
+            </div>
+            <div class="item">
+                <p>15</p>
+            </div>
+            <div class="item">
+                <p>16</p>
+            </div>
+            <div class="item">
+                <p>17</p>
+            </div>
+            <div class="item">
+                <p>18</p>
+            </div>
+            <div class="item">
+                <p>19</p>
+            </div>
+            <div class="item">
+                <p>20</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- flex 아이템 자식 요소 속성 -->
+    <div class="items principal">
+
+        <h2>flex 아이템(자식) 요소 속성</h2>
+
+        <div class="control">
+            <h4>
+                <a target="_blank" href="http://w3.unpocodetodo.info/css3/flex-align-self.php">align-self</a>
+                <small>( flex 아이템 속성 )</small>
+            </h4>
+            <div class="radio">
+                <input name="align-self" type="radio" class="align-self" id="R61" value="align-self-auto" checked><label
+                    for="R61">auto</label>
+                <input name="align-self" type="radio" class="align-self" id="R62" value="align-self-start"><label
+                    for="R62">flex-start</label>
+                <input name="align-self" type="radio" class="align-self" id="R63" value="align-self-end"><label
+                    for="R63">flex-end</label>
+                <input name="align-self" type="radio" class="align-self" id="R64" value="align-self-center"><label
+                    for="R64">center</label>
+                <input name="align-self" type="radio" class="align-self" id="R65" value="align-self-baseline"><label
+                    for="R65">baseline</label>
+                <input name="align-self" type="radio" class="align-self" id="R66" value="align-self-stretch"><label
+                    for="R66">stretch</label>
+            </div>
+        </div>
+        <div class="flex-container align-items-center" id="FCI1">
+
+            <div class="item">
+                <p>1</p>
+            </div>
+            <div class="item">
+                <p>2</p>
+            </div>
+            <div class="item" id="alignSelf">
+                <p style="font-size:50px;">3</p>
+            </div>
+            <div class="item">
+                <p>4</p>
+            </div>
+            <div class="item">
+                <p>5</p>
+            </div>
+
+        </div>
+
+        <div class="control">
+            <h4>
+                <a target="_blank" href="http://w3.unpocodetodo.info/css3/flex-abreviado.php#flexGrow">flex-grow</a>
+                <small>( flex 아이템 속성 )</small>
+            </h4>
+            <div class="radio">
+                <span class="nbsp"><label for="R71">요소 1</label><input type="number" class="flex-grow" id="R71" min="0"
+                        value="0"></span>
+                <span class="nbsp"><label for="R72">요소 2</label><input type="number" class="flex-grow" id="R72" min="0"
+                        value="0"></span>
+                <span class="nbsp"><label for="R73">요소 3</label><input type="number" class="flex-grow" id="R73" min="0"
+                        value="0"></span>
+                <span class="nbsp"><label for="R74">요소 4</label><input type="number" class="flex-grow" id="R74" min="0"
+                        value="0"></span>
+                <span class="nbsp"><label for="R75">요소 5</label><input type="number" class="flex-grow" id="R75" min="0"
+                        value="0"></span>
+            </div>
+        </div>
+        <div class="flex-container align-items-center" id="FCI2">
+
+            <div class="item" id="itemR71">
+                <p>1</p>
+            </div>
+            <div class="item" id="itemR72">
+                <p>2</p>
+            </div>
+            <div class="item" id="itemR73">
+                <p>3</p>
+            </div>
+            <div class="item" id="itemR74">
+                <p>4</p>
+            </div>
+            <div class="item" id="itemR75">
+                <p>5</p>
+            </div>
+
+        </div>
+
+        <div class="control">
+            <h4>
+                <a target="_blank" href="http://w3.unpocodetodo.info/css3/flex-abreviado.php#flexShrink">flex-shrink</a>
+                <small>( flex 아이템 속성 )</small>
+            </h4>
+            <!-- auto | flex-start | flex-end | center | baseline | stretch -->
+            <div class="radio">
+                <span class="nbsp"><label for="R81">요소 1</label><input type="number" class="flex-shrink" id="R81"
+                        min="0" value="1"></span>
+                <span class="nbsp"><label for="R82">요소 2</label><input type="number" class="flex-shrink" id="R82"
+                        min="0" value="1"></span>
+                <span class="nbsp"><label for="R83">요소 3</label><input type="number" class="flex-shrink" id="R83"
+                        min="0" value="1"></span>
+                <span class="nbsp"><label for="R84">요소 4</label><input type="number" class="flex-shrink" id="R84"
+                        min="0" value="1"></span>
+                <span class="nbsp"><label for="R85">요소 5</label><input type="number" class="flex-shrink" id="R85"
+                        min="0" value="1"></span>
+            </div>
+        </div>
+        <div class="flex-container align-items-center" id="FCI3">
+            <div class="item" id="itemR81">
+                <p>1</p>
+            </div>
+            <div class="item" id="itemR82">
+                <p>2</p>
+            </div>
+            <div class="item" id="itemR83">
+                <p>3</p>
+            </div>
+            <div class="item" id="itemR84">
+                <p>4</p>
+            </div>
+            <div class="item" id="itemR85">
+                <p>5</p>
+            </div>
+        </div>
+
+        <div class="control">
+            <h4>
+                <a target="_blank" href="http://w3.unpocodetodo.info/css3/flex-abreviado.php">flex</a>
+                <small>( flex 아이템 속성 )</small>
+            </h4>
+            <p class="code"><span class="selector">.item</span> { <span class="prop">flex</span>: <span
+                    class="val">flex-grow [flex-shrink] [flex-basis]</span>; }</p>
+            <table id="flexBasis">
+                <tr>
+                    <td>요소 1</td>
+                    <td>요소 2</td>
+                </tr>
+                <tr>
+                    <td><input type="number" class="flex-basis-grow" id="G1" min="0" value="0"><label
+                            for="G1">flex-grow</label></td>
+                    <td><input type="number" class="flex-basis-grow" id="G2" min="0" value="0"><label
+                            for="G2">flex-grow</label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" class="flex-basis-shrink" id="S1" min="0" value="0"><label
+                            for="S1">flex-shrink</label></td>
+                    <td><input type="number" class="flex-basis-shrink" id="S2" min="0" value="0"><label
+                            for="S2">flex-shrink</label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" class="flex-basis" id="B1" min="0" value="50"><label for="B1">flex-basis
+                            (%)</label></td>
+                    <td><input type="number" class="flex-basis" id="B2" min="0" value="50"><label for="B2">flex-basis
+                            (%)</label></td>
+                </tr>
+            </table>
+        </div>
+        <div class="flex-container align-items-center" id="FCI4">
+            <div class="item" id="item1">
+                <p>1</p>
+            </div>
+            <div class="item" id="item2">
+                <p>2</p>
+            </div>
+        </div>
+
+        <div class="control">
+            <h4>
+                <a target="_blank" href="http://w3.unpocodetodo.info/css3/flex-order.php">order</a>
+                <small>( flex 아이템 속성 )</small>
+            </h4>
+            <!-- auto | flex-start | flex-end | center | baseline | stretch -->
+            <div class="radio">
+                <span class="nbsp"><label for="R91">요소 1</label><input type="number" class="flex-order" id="R91"
+                        value="0"></span>
+                <span class="nbsp"><label for="R92">요소 2</label><input type="number" class="flex-order" id="R92"
+                        value="0"></span>
+                <span class="nbsp"><label for="R93">요소 3</label><input type="number" class="flex-order" id="R93"
+                        value="0"></span>
+                <span class="nbsp"><label for="R94">요소 4</label><input type="number" class="flex-order" id="R94"
+                        value="0"></span>
+                <span class="nbsp"><label for="R95">요소 5</label><input type="number" class="flex-order" id="R95"
+                        value="0"></span>
+            </div>
+        </div>
+        <div class="flex-container align-items-center" id="FCI5">
+            <div class="item" id="orderR91">
+                <p>1</p>
+            </div>
+            <div class="item" id="orderR92">
+                <p>2</p>
+            </div>
+            <div class="item" id="orderR93">
+                <p>3</p>
+            </div>
+            <div class="item" id="orderR94">
+                <p>4</p>
+            </div>
+            <div class="item" id="orderR95">
+                <p>5</p>
+            </div>
+        </div>
+
+        <!-- caniuse.com 정보 -->
+        <h2 style="margin-top: 40px">브라우저 호환성 정보</h2>
+        <p class="ciu_embed" data-feature="flexbox" data-periods="current,past_1,past_2,past_3"
+            data-accessible-colours="false"></p>
+
+    </div>
+    <script>
+        (function (global) {
+            "use strict";
+
+            function changeFlex(e, t) {
+                for (
+                    var n = document.querySelectorAll("." + e),
+                    l = document.querySelector("#" + t),
+                    r = 0;
+                    r < n.length;
+                    r++
+                )
+                    n[r].addEventListener(
+                        "change",
+                        function () {
+                            var e = this.value;
+                            l.setAttribute("class", "flex-container " + e);
+                        }
+                    );
+            }
+
+            function changeItemFlex(e, t) {
+                for (
+                    var n = document.querySelectorAll("." + e),
+                    l = document.querySelector("#" + t),
+                    r = 0;
+                    r < n.length;
+                    r++
+                )
+                    n[r].addEventListener(
+                        "change",
+                        function () {
+                            var e = this.value;
+                            l.setAttribute("class", "item " + e);
+                        }
+                    );
+            }
+
+            function changeFlexBasis(e, t) {
+                var n = isNaN(e.value) ? 0 : e.value;
+                document.querySelector("#" + t).style.WebkitFlexBasis = n + "%";
+                document.querySelector("#" + t).style.flexBasis = n + "%";
+            }
+
+            function changeFlexGrow(e, t) {
+                var n = isNaN(e.value) ? 0 : e.value;
+                document.querySelector("#" + t).style.WebkitFlexGrow = n;
+                document.querySelector("#" + t).style.flexGrow = n;
+            }
+
+            function changeFlexShrink(e, t) {
+                var n = isNaN(e.value) ? 0 : e.value;
+                document.querySelector("#" + t).style.WebkitFlexShrink = n;
+                document.querySelector("#" + t).style.flexShrink = n;
+            }
+
+            function changeFlexOrder(e, t) {
+                var n = isNaN(e.value) ? 0 : e.value;
+                document.querySelector("#" + t).style.WebkitOrder = n;
+                document.querySelector("#" + t).style.order = n;
+            }
+
+            function changeAll(e, t, n, l) {
+                changeFlexBasis(e, l), changeFlexGrow(t, l), changeFlexShrink(n, l);
+            }
+
+            for (
+                var flexO = document.querySelectorAll(".flex-order"), o = 0;
+                o < flexO.length;
+                o++
+            ) {
+                flexO[o].addEventListener(
+                    "change",
+                    function () {
+                        changeFlexOrder(this, "order" + this.id);
+                    }
+                );
+            }
+
+            changeFlex("display-flex", "displayFlex"),
+                changeFlex("flex-direction", "direction"),
+                changeFlex("flex-wrap", "wrap"),
+                changeFlex("flex-align-items", "align"),
+                changeFlex("justify-content", "justify"),
+                changeFlex("align-content", "alignContent"),
+                changeItemFlex("align-self", "alignSelf");
+
+            for (
+                var flexGrow = document.querySelectorAll(".flex-grow"), i = 0;
+                i < flexGrow.length;
+                i++
+            ) {
+                flexGrow[i].addEventListener("change", function () {
+                    var e = "item" + this.id;
+                    changeFlexGrow(this, e);
+                });
+            }
+
+            for (
+                var flexShrink = document.querySelectorAll(".flex-shrink"), j = 0;
+                j < flexShrink.length;
+                j++
+            ) {
+                flexShrink[j].addEventListener("change", function () {
+                    var e = "item" + this.id;
+                    changeFlexShrink(this, e);
+                });
+            }
+
+
+            var B1 = document.querySelector("#B1"),
+                G1 = document.querySelector("#G1"),
+                S1 = document.querySelector("#S1"),
+                B2 = document.querySelector("#B2"),
+                G2 = document.querySelector("#G2"),
+                S2 = document.querySelector("#S2");
+
+            B1.addEventListener("change", function () {
+                changeAll(B1, G1, S1, "item1");
+            });
+
+            G1.addEventListener("change", function () {
+                changeAll(B1, G1, S1, "item1");
+            });
+
+            S1.addEventListener("change", function () {
+                changeAll(B1, G1, S1, "item1");
+            });
+
+            B2.addEventListener("change", function () {
+                changeAll(B2, G2, S2, "item2");
+            });
+
+            G2.addEventListener("change", function () {
+                changeAll(B2, G2, S2, "item2");
+            });
+
+            S2.addEventListener("change", function () {
+                changeAll(B2, G2, S2, "item2");
+            });
+
+        })(window);
+    </script>
+</body>
+
+</html>

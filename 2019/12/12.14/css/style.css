@@ -1,0 +1,36 @@
+::selection {
+  background: #9dd7da;
+  color: #4a5f5f;
+}
+
+body {
+  margin: 30px;
+  background: #fff;
+  color: #000;
+}
+
+.album {
+  float: right;
+  margin: 0 0 0 20px;
+  padding: 0;
+  width: 240px;
+}
+
+.album img {
+  vertical-align: middle;
+}
+
+.album audio {
+  width: 100%;
+}
+
+#css-typography {
+  float: left;
+  width: 520px;
+}
+
+.lone-url {
+  border-radius: 6px;
+  padding: 1em;
+  background: #efefef;
+}

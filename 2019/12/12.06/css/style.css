@@ -1,0 +1,153 @@
+body{margin: 50px 80px 80px;}
+/*[border-radius 속성]
+ : 테두리를 둥글게 만들어 줍니다. border 속성 없이도 사용 할 수 있습니다.*/
+h1{
+	margin-left: -0.8em;
+	border:5px solid currentColor;
+	border-left-width: 20px;
+	border-radius: 4px;
+	padding: 0.4em 0.6em 0.2em 0.25em;
+	color: #474cc5;
+	font-size: 38px;
+	font-weight: 700;
+	line-height: 1;
+}
+h2{
+	font-size: 26px;
+	font-weight: 400;
+}
+p{line-height: 1.5;}
+/*[text-decoration 속성]
+	: 선으로 텍스를 꾸밀 수 있게 해주는 속성, 기본 값-none*/
+abbr{
+	cursor: help;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+}
+a{color: #474cc5;}
+figure{
+	margin: 20px 10px;
+	border: 1px solid #999;
+	padding: 20px;
+}
+figure img{
+	width: 100%;
+	height: auto;
+}
+figcaption{
+	margin-top: 20px;
+	border-top: 1px solid #a1a1a7;
+	padding-top: 20px;
+	text-align: center;
+	color:#545496;
+}
+section{margin-bottom: 30px;}
+/* [:first-child & :first-of-type 차이점]
+	 :first-child - 형제 요소 그룹 중 첫번째 요소를 의미한다.
+	 :first-of-type - 형제 요소의 그룹 중 해당 타입의 첫번째 요소를 나타낸다.*/
+.part:first-of-type{
+	margin-top: 3em;
+	margin-bottom:2em;
+	border-bottom: 1px solid #ccc;
+}
+.code-block{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 6px;
+	padding: 0.6em 1.5em;
+	background: #eee;
+}
+.selector{color: #3fb5c8;}
+.brace {color: #fc4a54;}
+.property {color: #474cc5;}
+.value {color: #fd8308;}
+.tag {color: #3fb5c8;}
+pre{font-size: 16px;}
+code{
+	border-radius: 4px;
+	padding: 0.2em 0.4em;
+	background:#efefef;
+}
+blockquote {
+  position: relative;
+  margin-left: 30px;
+  margin-right: 0px;
+  border: 8px solid #e9e9e9;
+  border-left-color: transparent;
+  padding: 2em;
+}
+
+blockquote:hover {
+  border-top-color: #474cc5;
+  border-right-color: #474cc5;
+  border-bottom-color: #474cc5;
+}
+
+blockquote:hover *,
+blockquote:hover::before {
+  color: #474cc5;
+}
+
+blockquote dfn {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: bold;
+  color: #5b5858;
+}
+
+blockquote p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #5b5858;
+}
+
+blockquote cite {font-style: normal;}
+
+blockquote a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #5b5858;
+}
+
+blockquote::before {
+  content: '“';
+  position: absolute;
+  top: -20px;
+  left: -45px;
+  font-size: 100px;
+  font-family: Arial;
+  line-height: 1;
+  background: #fff;
+  color: #e9e9e9;
+}
+/* [:: selection] - 클릭하고 텍스트를 통해 마우스를 드래그로 사용자에 의해 강조 된 문서의 일부에 스타일을 적용합니다.*/
+::selection {
+  background: #474cc5;
+  color: #fff;
+}
+/*[display:flex]
+	:기존 올드한 레이아웃 제작방법을 개선하고자 flebox가 생겼다.
+	flex은 flexible의 줄임말로 유동적인 레이아웃을 손쉽게 만들 수 있다는 의미를 가진다. 
+	*/
+.cascading-rules {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+.cascading-rules li {flex: 0 0 25%;}
+
+.cascading-rules p {
+  margin-top: 10px;
+  line-height: 1;
+}
+
+.cascading-rules em {
+  font-style: normal;
+  font-size: 14px;
+}
+

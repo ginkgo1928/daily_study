@@ -1,0 +1,131 @@
+/* 배경 스타일 */
+  body {
+    margin: 0;
+    height: 100vh;
+    background: #000;
+  }
+  
+  body::before {
+    content: '';
+    opacity: 0.17;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url("https://i.stack.imgur.com/dPltu.png");
+    background: #86fdf7;
+  }
+  
+  
+  /* 소닉 어드벤쳐 스타일 */
+  .sonic-adventure {
+    position: absolute;
+    width: 1000px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 6px #007eff;
+    background: 
+      url("https://thejesterscorner.files.wordpress.com/2013/02/sonic-the-hedgehog-stage.png")
+      0 55%;
+    background-size: cover;
+    border-radius: 4px;
+  }
+  
+  .switcher-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-left: 8px solid #007dff;
+    padding: 3.6em 1.3em 0;
+    background: 
+      #fff 
+      url("http://info.sonicretro.org/images/a/a8/Sonictails2_Tails_01.png") 
+      no-repeat 
+      55% 95%;
+    background-size: 90px 120px;
+    border-radius: 0 4px 4px 0;
+  }
+  
+  /* 
+  애니메이션(Animation)
+  
+    animation-name             애니메이션 이름
+    animation-duration         애니메이션 시간
+    animation-timing-function  애니메이션 타이밍 함수
+    animation-delay            애니메이션 지연시간
+    animation-direction        애니메이션 종료 후, 진행 (순/역)방향
+    animation-iteration-count  애니메이션 반복 횟수 (infinite: 무한반복)
+    animation-play-state       애니메이션 재생/일시정지 설정
+    animation-fill-mode        애니메이션 시작 전/종료 후 키프레임 설정 (forwards: 유지)
+    animation                  애니메이션 속기형
+  
+  */
+  
+
+
+  .headline {
+    position: absolute;
+    z-index: 100;
+    top: -50px;
+    right: -20px;
+    width: 190px;
+    height: auto;
+    transform: scale(1.4);
+  }
+  
+  .sonic {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+    animation:  0.5s ease-in forwards 0.2s;
+    /* 애니메이션 연결 */
+    /* animation-name: sonic-runing; */
+    /* 애니메이션 진행되는 시간*/
+    /* animation-duration:1s; */
+    /* animation-timing-function:cubic-bezier(0.660.-0.550,0.265,1.550); */
+    /* animation-timing-function: linear; */
+    /* 반복횟수 */
+    /* animation-iteration-count: infinite; /*infinite - 무한반복 */
+    /* animation-direction: alternate;  */
+    /* 애니메이션 끝날 때 제어(기본값 :backwards) */
+    /* animation-fill-mode: forwards;
+    animation-delay:400ms;
+    animation-play-state: paused; */
+  }
+
+  /* .sonic-adventure:active .sonic{
+    animation-play-state: running;
+  } */
+
+  .sonic.is-run{
+    animation-name: sonic-runing;
+  }
+
+  .sonic.is-jump{
+    animation-name: sonic-jump;
+  }
+/* 애니메이션 정의*/
+@keyframes sonic-runing{
+    from{}  /* from 생략가능 */
+    to{
+        transform: translateX(740px);
+    }
+}
+
+@keyframes sonic-jump{
+  50%{
+    transform: translateY(-140px);
+  }
+  100%{
+    transform:translateY(0);
+  }
+}
+body{
+  position: relative;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS-모던레이아웃</title>
+  <link rel="stylesheet" href="css/flexbox.css">
+</head>
+
+<body>
+  <!-- SUPPORT -->
+  <button type="button" class="toggle-caniuse">브라우저 지원 정보 켜기</button>
+  <p hidden class="ciu_embed" data-feature="flexbox" data-periods="current,past_1,past_2,past_3"
+    data-accessible-colours="false"></p>
+
+
+  <!-- FIGURES -->
+  <figure class="flex-practice-ex">
+    <figcaption>flex 컨테이너 VS flex 아이템</figcaption>
+    <img hidden src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-80/llflex1-01.png" alt="flexbox-justify">
+    <figcaption>flex 컨테이너 플로우 축(axis)</figcaption>
+    <img hidden src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-80/llflex2-02.png" alt="flexbox-axis">
+    <figcaption>justify-content 설정</figcaption>
+    <img hidden src="http://blog.teamtreehouse.com/wp-content/uploads/2012/12/flexbox-justify.png"
+      alt="flexbox-justify">
+    <figcaption>flex-direction 설정</figcaption>
+    <img hidden src="http://blog.teamtreehouse.com/wp-content/uploads/2012/12/flexbox-flex-direction.png"
+      alt="flex-direction">
+    <figcaption>flex-wrap 설정</figcaption>
+    <img hidden src="http://blog.teamtreehouse.com/wp-content/uploads/2012/12/flexbox-wrap.png" alt="flex-wrap">
+    <figcaption>가운데 배치 설정</figcaption>
+    <img hidden src="https://frontendtricks.files.wordpress.com/2015/03/flex-center.png" alt="flex-center">
+    <figcaption>아이템 순서 설정</figcaption>
+    <img hidden src="http://blog.teamtreehouse.com/wp-content/uploads/2012/12/flexbox-order.png" alt="flex-order">
+  </figure>
+
+
+  <!-- FLEXBOX -->
+  <div class="flex-container">
+    <div class="flex-item">F</div>
+    <div class="flex-item">L</div>
+    <div class="flex-item">E</div>
+    <div class="flex-item">X</div>
+    <div class="flex-item">B</div>
+    <div class="flex-item">O</div>
+    <div class="flex-item">X</div>
+  </div>
+  <script>
+    if (!NodeList.prototype.forEach) {
+      NodeList.prototype.forEach = Array.prototype.forEach;
+    }
+
+    var slice = [].slice;
+
+    var ciu = document.querySelector('.ciu_embed');
+    var btn = document.querySelector('.toggle-caniuse');
+    var figcaptions = document.querySelectorAll('figcaption');
+
+    btn.addEventListener('click', function () {
+      if (ciu.hasAttribute('hidden')) {
+        ciu.removeAttribute('hidden');
+        btn.textContent = btn.textContent.replace('켜기', '끄기');
+      } else {
+        ciu.setAttribute('hidden', true);
+        btn.textContent = btn.textContent.replace('끄기', '켜기');
+      }
+    });
+
+    figcaptions.forEach(function (caption, index) {
+      var img = caption.nextElementSibling;
+      var l = figcaptions.length - 1;
+      caption.style.cursor = 'pointer';
+      caption.addEventListener('click', function () {
+        var prevs = slice.call(figcaptions, 0, index);
+        if (img.hasAttribute('hidden')) {
+          img.removeAttribute('hidden');
+          prevs.forEach(function (prev) { prev.setAttribute('hidden', true); });
+        } else {
+          img.setAttribute('hidden', true);
+          prevs.forEach(function (prev) { prev.removeAttribute('hidden'); });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

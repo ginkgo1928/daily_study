@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 2rem 3rem;
+  font: 1.6rem/1.8 "Nanum Myeongjo", serif;
+  letter-spacing: -0.01em;
+  word-spacing: 0.02em;
+  color: #505050;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.toggle-caniuse {
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid currentcolor;
+  border-radius: 4px;
+  padding: 7px 10px;
+  background: none;
+  font-size: 14px;
+  color: #505050;
+  transition: all 0.2s;
+}
+
+.toggle-caniuse:hover,
+.toggle-caniuse:focus {
+  border-color: currentcolor;
+  color: #009cc1;
+}
+
+.toggle-caniuse:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px currentcolor;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.rwd-image {
+  width: 100%;
+  height: auto;
+}
+
+/* -------------------------------------------------------- 
+  [멀티 컬럼 레이아웃]
+  ---------------------------------------------------------
+
+  멀티 컬럼 레이아웃 모듈은 이전 CSS 방법 보다 유연성을 제공합니다.
+  
+  // 컬럼 개수 또는 폭 설정
+     column-count
+     column-width
+     columns (속기형 작성법)
+
+     ※ 영상 강의에서는 column-count와 column-width 값을 동시 설정하지 말라고 안내했지만,
+       동시 설정 가능합니다. (참고: https://goo.gl/yo1P1s)
+
+     [예시]
+     columns: 12em;       // column-width: 12em; column-count: auto
+     columns: auto 12em;  // column-width: 12em; column-count: auto
+     columns: 2;          // column-width: auto; column-count: 2
+     columns: 2 auto;     // column-width: auto; column-count: 2
+     columns: auto;       // column-width: auto; column-count: auto
+     columns: auto auto;  // column-width: auto; column-count: auto
+     columns: 12 320px;   // column-width: 320px; column-count: 12
+     
+  // 컬럼 간격 또는 구분 선 설정
+     column-gap
+     column-rule
+       column-rule-color
+       column-rule-style
+       column-rule-width
+
+  // 컬럼 병합
+     column-span
+
+  // 컬럼 채우기
+     column-fill
+
+*/
+
+/* 섹션 */
+.magazine-section {
+  margin: 6rem 0;
+   /* column-count: 2; */
+  /* 모바일 일 경우 문제점이 발생.  */
+  /* column-width: 480px; */
+  /*  colums : column-cwidth column-count 중에서 하나만 설정 해야 된다. */
+  columns: 480px;
+  column-gap:2em;
+  column-rule: 1px dashed #dcdcdc;
+}
+
+/* 제목 */
+.magazine-headline {
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  column-span: all;
+}
+
+/* 단락 */
+.magazine-section p {
+  margin-top: 0;
+  margin-bottom: 2.4rem;
+}
+
+/* 피규어 */
+.magazine-figure {
+  display:flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 3rem auto;
+  padding: 2rem;
+  width: 90%;
+  border: 1px solid #dbdbdb;
+}
+
+.magazine-figure img {
+  width: 95%;
+  margin-bottom: 1.5rem;
+}
+
+.magazine-figure figcaption {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>멀티칼럼 레이아웃</title>
+    <link rel="stylesheet" href="css/multiple.css">
+</head>
+
+<body>
+    <!-- SUPPORT -->
+    <button type="button" class="toggle-caniuse">브라우저 지원 정보 켜기</button>
+    <p hidden class="ciu_embed" data-feature="multicolumn" data-periods="current,past_1,past_2,past_3"
+        data-accessible-colours="false"></p>
+
+
+    <!-- 멀티 컬럼 디자인 -->
+    <!-- 내용 출처: https://goo.gl/4wxqfC -->
+    <section class="magazine-section">
+
+        <h2 class="magazine-headline">독자의 시선 방향</h2>
+
+        <p>독자에게 영향을 주는 디자인은 의미가 있어야 합니다. 독자들은 페이지의 가장 높은 부분에 집중 합니다. 독자가 페이지를 훑어 볼 때 눈이 가장 먼저 가는 위치이기 때문에, 페이지 가장 낮은 위치
+            특히 오른쪽 페이지에 헤드 라인을 배치하면 이야기를 시작할 수 없습니다. 자연적인 출발점이 아니기에 좋은 디자인이 아닙니다.</p>
+
+        <p>독자는 가장 중요한 것을 찾기 위해 페이지를 검색해야 한다면(특히 페이지에 이미지가 없다면) 제목을 가장 먼저 찾습니다. 제목을 페이지의 가장 낮은 위치에 놓고, 본문을 페이지의 시작 위치에 놓는
+            것은 좋지 않은 방법입니다.</p>
+
+        <p>이야기를 읽는 자연스러운 방법이 아니기 때문이죠. 이야기는 흐름을 가져야 합니다. 왼쪽 상단부터 길을 따라 가면서 아래쪽으로 끊김없이 진행되어야 합니다. (나라마다 글을 읽는 문화가 다름. 글의
+            흐름이 반대 방향일 경우, 반대로 적용)</p>
+
+        <figure class="magazine-figure">
+            <img src="https://preview.ibb.co/f0FNbn/magazine_spread_good_headline_positioning.png" alt>
+            <figcaption>하단에 제목을 배치하는 것을 항상 피해야 하는 것은 아닙니다. 독자가 이야기의 흐름을 방해받지 않는다면, 제목을 하단에 위치시키는 것도 좋은 전략이 될 수 있습니다. 제목을
+                이미지 위에 배치하는 것이 오히려 독이 되는 상황도 있습니다.</figcaption>
+        </figure>
+
+        <p>이 방법은 디자이너가 독자의 시선을 끌 수 있는 요소를 페이지 상단에 배치하여 주의를 끌어 글을 자연스럽게 읽게 하도록 유도합니다. 자연스럽게 독자가 글을 읽도록 끌어내는 것. 그것이 디자인의
+            목표가 되어야 합니다.</p>
+
+        <figure class="magazine-figure">
+            <img src="https://preview.ibb.co/c9sUNS/magazine_spread_bad_text_flow.png" alt>
+            <figcaption>이것은 잘못된 텍스트 흐름을 보여주는 예입니다. 이야기의 흐름이 자연스러운 것이 아니라 독자가 텍스트를 따라가는데 어려움을 겪을 수 있으므로 피해야 할 잘못된 디자인입니다.
+            </figcaption>
+        </figure>
+
+    </section>
+
+
+    <section class="magazine-section">
+
+        <h2 class="magazine-headline">이미지 및 본문 배열</h2>
+
+        <p>커다란 텍스트 블록을 배치 할 때, 블록을 하나의 흐름이 되도록 만들어야 합니다. 흐름을 깨트려서는 안됩니다. 흐름은 이야기이며, 이야기가 끊기면 독자는 어려움을 겪게 됩니다. 텍스트
+            열(columns)의 흐름을 깔끔하게 유지합니다.</p>
+
+        <p>상황은 간단해야 하며 상단의 열을 정렬하고 그 위에 이미지를 배치하여 디자인을 단순화 해야 합니다. 이 방법은 독자를 이야기의 흐름 속으로 물 흐르듯 이끌어 갈 수 있습니다.</p>
+
+        <figure class="magazine-figure">
+            <img src="https://preview.ibb.co/bsox97/magazine_spread_good_text_flow.png" alt>
+            <figcaption>이것은 올바른 텍스트의 흐름을 보여주는 예입니다. 텍스트와 이미지가 중요한 위치에 배치되어 있고, 글을 읽는 흐름은 자연스러워 독자에게 문제가 되는 영향을 미치지 않습니다.
+            </figcaption>
+        </figure>
+
+        <p>위의 이미지를 살펴보면 앞서 살펴본 두 번째 이미지보다 텍스트의 흐름이 어떻게 더 좋은지 확연하게 알 수 있습니다. 빨간색 선은 독자의 시선 방향을 나타냅니다. 두 번째 이미지에서 텍스트의 흐름을
+            따라가는 독자의 시선이 얼마나 힘든지 알 수 있을 겁니다.</p>
+
+    </section>
+    <!-- JavaScript -->
+    <script>
+        if (!NodeList.prototype.forEach) {
+            NodeList.prototype.forEach = Array.prototype.forEach;
+        }
+
+        var slice = [].slice;
+
+        var ciu = document.querySelector('.ciu_embed');
+        var btn = document.querySelector('.toggle-caniuse');
+        var figcaptions = document.querySelectorAll('figcaption');
+
+        btn.addEventListener('click', function () {
+            if (ciu.hasAttribute('hidden')) {
+                ciu.removeAttribute('hidden');
+                btn.textContent = btn.textContent.replace('켜기', '끄기');
+            } else {
+                ciu.setAttribute('hidden', true);
+                btn.textContent = btn.textContent.replace('끄기', '켜기');
+            }
+        });
+    </script>
+</body>
+
+</html>

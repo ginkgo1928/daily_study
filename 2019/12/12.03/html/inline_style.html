@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<title>CSS 기본문법(Syntax)</title>
+	<!-- CSS 파일을 HTML 문서에 연결(External Style) -->
+	<link rel="stylesheet"  href="../css/child.css">
+
+	<!-- CSS 코드를 HTML 문서에  포함(Internal Style) -->
+	<!-- 	
+	<style>
+		section{
+		color:#90300;
+		}
+		h1{
+			color: tan;
+		}
+		abbr{
+			cursor: help;
+			text-decoration: none;
+		}
+	</style> -->
+</head>
+<body>
+	<!-- 인라인 스타일 : inline style -->
+	<!-- 태그에 속성에 style을 지정해서 직접 style 적용  -->
+	<section id="about-css">
+		<h1>
+			<dfn id="dfn-css"><abbr lang="en" title="Cascading Style Sheets">CSS</abbr></dfn>언어란 ?
+		</h1>
+		<p class="note">
+			<a href="#dtn-css">CSS</a>는 문서가 유저에게 어떻게 표시되는지를 지정하는 언어입니다. -스타일 레이아웃 등. 
+		</p>
+		<p>
+			문서는 보통 마크업 언어를 사용한 테스트 파일 입니다.-<abbr title="Hyper Text Markup Language">HTML</abbr>이 가장 일반적인 마크업
+			언어지만,<abbr title="Scalable Vector Graphics">SVG</abbr>나<abbr title="eXtensible Markup Language">XML</abbr>과 같은 다른
+			마크업 언어를 만날 수도 있을 겁니다.
+		</p>
+
+		<p class="note box">
+			사용자에게 문서를 표시한다는 것을 방문자가 이용할 수 있는 형식으로 교환하는 것을 의미합니다.
+			Firefox, Chrome, Internet Explorer(IE)와 같은 같은 웹브라우저는 문서를 컴퓨터의 화면, 
+			프로젝터나 프린터에서 시각적으로 표시하도록 설계되어 있습니다.
+		</p>
+		<figure class="figure">
+			<img src="https://mdn.mozillademos.org/files/11781/rendering.svg" alt="브라우저가 처리하는 css의 작동원리">
+			<figcaption>브라우저가 처리하는<strong>CSS의 작동 원리</strong></figcaption>
+		</figure>	
+	</section>
+</body>
+</html>

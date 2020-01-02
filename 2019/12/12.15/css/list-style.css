@@ -1,0 +1,56 @@
+/*
+  ------------------------------------------------
+  CSS 리스트(Lists) 스타일링
+  ------------------------------------------------
+  HTML <ul>, <ol> ,<li>, <dl>, <dt>, <dd>
+
+  list-style-type : 앞의 블릿기호르 바꿀 때 사용.
+  list-style-positon : 목록의 마커 위치는 정하는 속성.
+  list-style-image: url("../images/start.svg") 
+  앞의 블릿기호를 내가 다른 img로 바꿀 때 사용.
+
+
+  [list 초기화의 경우]
+  list-style-type:none;
+  padding-left:0;
+*/
+
+:root{
+  font-size: 10px;
+}
+/* rem = root em */
+body{
+  /* font-size: 16px; */
+  font-size:1.6rem;  
+}
+ul{
+  margin: 0;
+  /* 일괄적으로 한반에 속기형 */
+  list-style: none inside url("../images/start.svg");
+  padding-left: 0;
+  /* list-style-image: url("../images/start.svg") ; */
+ 
+  /* list-style-type: decimal-leading-zero; */
+  /* list-style-position: inside; */
+  /* margin-top: 0;
+  margin-bottom: 0; */
+}
+li{
+  line-height: 2; 
+  margin: 10px 0;
+}
+dl{
+  margin-left: 1em;
+  /* margin-top: 0;
+  margin-bottom: 0; */
+}
+dt{
+  font-weight: bold;
+  /* font-size: 19px; */
+  color:#474cc5;
+}
+dd{
+  margin-left: 0;
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
