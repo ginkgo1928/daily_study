@@ -1,8 +1,0 @@
-/* Tmon-font */
-@font-face { 
-    font-family: TmonMonsori;
-    src: url(TmonMonsori.woff) format('woff');
-     font-size: normal;
-     font-weight: normal;
-     unicode-range: U+0-10FFFF;
- }
