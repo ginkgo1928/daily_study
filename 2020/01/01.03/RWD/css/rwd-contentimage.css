@@ -1,0 +1,127 @@
+:root {
+    --chrome__background-color: #483dfb;
+    --chrome-head__bottom-color: #567fff;
+    --chrome-head__circle-color: #567fff;
+    font-size: 10px;
+    background: #262626;
+}
+
+::selection {
+    background: #2f2f2f;
+    color: #d8d8d8;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font: 1.6rem/1.5 Arial, sans-serif;
+    letter-spacing: -0.05em;
+}
+
+figure {
+    margin: 0;
+}
+
+/* 브라우저 디자인 */
+.browser {
+    display: flex;
+    flex-flow: column;
+    /* contenxt = 960px + padding: 1.4rem */
+    flex: 0 0 calc(960px + (1.4rem * 2));
+    height: 80vh;
+    border-radius: 0.6rem;
+    background: var(--chrome__background-color);
+}
+
+.browser-head {
+    display: flex;
+    align-items: center;
+    flex: 0 0 4rem;
+    padding-left: 1.4rem;
+    border-bottom: 1px solid var(--chrome-head__bottom-color);
+}
+
+.browser-head__circle {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.7rem;
+    border-radius: 50%;
+    background: var(--chrome-head__circle-color);
+}
+
+.browser-body {
+    overflow: hidden;
+    display: flex;
+    flex: 1 0 50%;
+    padding: 1.4rem;
+}
+
+.browser-view {
+    flex: 1 0 50%;
+    background: #fff;
+}
+
+/* 유연한 이미지 실습 */
+.layout__fluid-grids {
+    display: flex;
+}
+
+.layout__fluid-grids>* {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    color: #4947f7;
+    font-size: 5rem;
+}
+
+.layout__fluid-grids .content-alpha {
+    flex: 0 0 50%;
+    background: #fdf46e;
+}
+
+.layout__fluid-grids .content-beta {
+    flex: 0 0 50%;
+    background: #27d1e1;
+}
+
+.layout__fluid-grids figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+    /* background: #fff; */
+}
+
+/*  콘텐츠 유연한 이미지 */
+.layout__fluid-grids img {
+    width: 100%;
+    height: auto;
+}
+.layout__fluid-grids .handle {
+    outline: none;
+    cursor: -webkit-grab;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    width: 1rem;
+    height: 10vh;
+    border: 0;
+    background: #4947f7;
+    border-radius: 0.5rem;
+    transform: translate(-50%, -50%);
+}
+
+.layout__fluid-grids .handle:active {
+    background: #fff;
+    box-shadow: 0 0 0 5px #4947f7;
+}
+
+.layout__fluid-grids .handle:focus {
+    outline: none;
+}

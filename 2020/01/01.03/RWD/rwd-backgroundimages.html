@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko-KR" class="demo">
+<head>
+    <meta charset="UTF-8">
+    <title>rwd - 유연한 배경 이미지</title>
+    <link rel="stylesheet" href="css/rwd-backgroundimages.css">
+</head>
+
+<body>
+    <div class="browser">
+        <div class="browser-head">
+            <div class="browser-head__circle"></div>
+            <div class="browser-head__circle"></div>
+            <div class="browser-head__circle"></div>
+        </div>
+
+        <div class="browser-body">
+            <div class="browser-view layout__fluid-grids">
+                <div class="content-alpha">
+                    <figure class="tulum rwd-bg-image"></figure>
+                </div>
+                <div class="content-beta">
+                    <figure class="maat rwd-bg-image"></figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var min = 20;
+        var max = 80;
+        var width = 960;
+
+        var alpha = document.querySelector('.content-alpha');
+        var beta = document.querySelector('.content-beta');
+
+        var alpha_coords_info = alpha.getBoundingClientRect();
+        var start = alpha_coords_info.left;
+        var end = alpha_coords_info.right;
+
+        var handle = document.createElement('button');
+        handle.setAttribute('aria-label', '브라우저 스크린 사이즈 조정');
+        handle.classList.add('handle');
+        handle.style.cssText = 'left: ' + (end - start) + 'px;';
+
+        var view = document.querySelector('.browser-view');
+        view.style.cssText = 'position: relative; overflow: auto';
+        view.insertAdjacentElement('beforeend', handle);
+
+        var is_drag = false;
+
+        handle.addEventListener('mousedown', function (e) {
+            is_drag = true;
+            document.addEventListener('mousemove', mousemoveHandle);
+            document.addEventListener('mouseup', mouseupHandle);
+        });
+
+        function mousemoveHandle(e) {
+            var start = alpha.getBoundingClientRect().left;
+            var mouseX = e.clientX;
+            var moveX = mouseX - start;
+            if (is_drag) {
+                handle.style.cursor = '-webkit-grabbing';
+                var percentage = moveX / width * 100;
+                if (percentage > min && percentage < max) {
+                    handle.style.left = moveX + 'px';
+                } else {
+                    if (percentage <= min) { percentage = 20; }
+                    else { percentage = max; }
+                    moveX = percentage * width / 100;
+                    handle.style.left = moveX + 'px';
+                }
+                alpha.style.flex = '0 0 ' + percentage + '%';
+                beta.style.flex = '0 0 ' + (100 - percentage) + '%';
+            }
+        }
+
+        function mouseupHandle(e) {
+            is_drag = false;
+            handle.style.cursor = '-webkit-grab';
+            document.removeEventListener('mousemove', mousemoveHandle);
+            document.removeEventListener('mouseup', mouseupHandle);
+        }
+    </script>
+</body>
+</html>

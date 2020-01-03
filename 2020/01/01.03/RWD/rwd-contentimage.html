@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko-KR" class="demo">
+<head>
+    <meta charset="UTF-8">
+    <title>rwd - 유연한 콘텐츠 이미지</title>
+    <link rel="stylesheet" href="css/rwd-contentimage.css">
+</head>
+<body>
+    <div class="browser">
+        <div class="browser-head">
+            <div class="browser-head__circle"></div>
+            <div class="browser-head__circle"></div>
+            <div class="browser-head__circle"></div>
+        </div>
+        <div class="browser-body">
+            <div class="browser-view layout__fluid-grids">
+                <div class="content-alpha">
+                    <figure class="tulum"></figure>
+                </div>
+                <div class="content-beta">
+                    <figure class="maat"></figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // 설정 값
+        var min = 20;
+        var max = 80;
+        var width = 960;
+
+        // 문서 객체 참조
+        var alpha = document.querySelector('.content-alpha');
+        var beta = document.querySelector('.content-beta');
+
+        // 위치 정보 값 수집
+        var alpha_coords_info = alpha.getBoundingClientRect();
+        var start = alpha_coords_info.left;
+        var end = alpha_coords_info.right;
+
+        // 핸들 객체 생성 및 속성 설정
+        var handle = document.createElement('button');
+        handle.setAttribute('aria-label', '브라우저 스크린 사이즈 조정');
+        handle.classList.add('handle');
+        handle.style.cssText = 'left: ' + (end - start) + 'px;';
+
+        // 브라우저 뷰 객체 참조
+        var view = document.querySelector('.browser-view');
+        view.style.cssText = 'position: relative; overflow: auto';
+        view.insertAdjacentElement('beforeend', handle);
+
+        // 드래그 상태
+        var is_drag = false;
+
+        // 이벤트 핸들러
+        function mousemoveHandle(e) {
+            var start = alpha.getBoundingClientRect().left;
+            var mouseX = e.clientX;
+            var moveX = mouseX - start;
+            if (is_drag) {
+                var percentage = moveX / width * 100;
+                if (percentage > min && percentage < max) {
+                    handle.style.left = moveX + 'px';
+                } else {
+                    if (percentage <= min) { percentage = 20; }
+                    else { percentage = max; }
+                    moveX = percentage * width / 100;
+                    handle.style.left = moveX + 'px';
+                }
+                alpha.style.flex = '0 0 ' + percentage + '%';
+                beta.style.flex = '0 0 ' + (100 - percentage) + '%';
+            }
+        }
+
+        function mouseupHandle(e) {
+            is_drag = false;
+            handle.style.cursor = '-webkit-grab';
+            document.removeEventListener('mousemove', mousemoveHandle);
+            document.removeEventListener('mouseup', mouseupHandle);
+        }
+
+        // 이벤트 핸들링
+        handle.addEventListener('mousedown', function (e) {
+            is_drag = true;
+            handle.style.cursor = '-webkit-grabbing';
+            document.addEventListener('mousemove', mousemoveHandle);
+            document.addEventListener('mouseup', mouseupHandle);
+        });
+    </script>
+</body>
+</html>
